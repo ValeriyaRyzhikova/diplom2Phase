@@ -1,0 +1,151 @@
+\textbf{Доказательство.}  Рассмотрим первое уравнение системы \eqref{fSystemOfEquations} в пределе $\varepsilon\rightarrow 0$, обозначим \\
+$$\lim_{\varepsilon\to 0} F_{n_{1}, n_{2}}(w,\tau,\varepsilon)=F_{n_{1}, n_{2}}(w,\tau)$$  и получим
+\begin{equation} \label{fAfterZero}
+	\begin{split} 
+		&-(\lambda+n_{1}\mu_{1}+n_{2}\mu_{2})F_{n_{1}, n_{2}}(w,\tau) + j\overline{E}_{n_{1}+n_{2}}^N\diffp{F_{n_{1}, n_{2}}((w,\tau)}{w}+\\
+		&+ \mu_{1}r_{1}qn_{1}F_{n_{1}, n_{2}}(w,\tau)+ \mu_{2}r_{1}(1-q)n_{2}F_{n_{1}, n_{2}}(w,\tau)+\\
+		&+ \lambda  E_{n_{1}+n_{2}}^N F_{n_{1}, n_{2}}(w,\tau)+\lambda qF_{n_{1}-1, n_{2}}(w,\tau) +\\
+		&- j q  \diffp{F_{n_{1}-1, n_{2}}(w,\tau)}{w}+\lambda (1-q)F_{n_{1}, n_{2}-1}(w,\tau) +\\
+		&- j (1-q)  \diff{F_{n_{1}, n_{2}-1}(u,t)}{w}+ \mu_{1} r_{0} (n_{1}+1)F_{n_{1} +1 , n_{2}}(w,\tau) +\\
+		&+ \mu_{1} r_{2} (n_{1}+1) F_{n_{1} + 1, n_{2}}(w,\tau)+ \mu_{2} r_{0}(n_{2}+1) F_{n_{1}, n_{2} + 1 }(w,\tau)+\\
+		& + \mu_{2} r_{2} (n_{2}+1) F_{n_{1}, n_{2} + 1}(w,\tau)+\\
+		&+\mu_{1} r_{1}(1-q) (n_{1}+1)F_{n_{1} +1 , n_{2}-1}(w,\tau)+\\
+		&+\mu_{2} r_{1}q (n_{2}+1)F_{n_{1} -1 , n_{2}+1}(w,\tau)=0
+	\end{split}
+\end{equation}
+
+Находим решение уравнения \eqref{fAfterZero} в виде $F_{n_{1}, n_{2}}(w,\tau)=L_{n_{1}, n_{2}}e^{jwx(\tau)}$. Получим следующую систему\\
+\begin{equation}
+	\begin{split}
+		&-(\lambda+\mu_{1}n_{1}+n_{2}\mu_{2})L_{n_{1}, n_{2}} 
+		- x(\tau)\overline{E}_{n_{1}+n_{2}}^N L_{n_{1}, n_{2}}+\\
+		&+ \mu_{1}r_{1}qn_{1}L_{n_{1}, n_{2}}+ \mu_{2}r_{1}(1-q)n_{2}L_{n_{1}, n_{2}}+\\
+		&+ \lambda  E_{n_{1}+n_{2}}^N L_{n_{1}, n_{2}}+\lambda qL_{n_{1}-1, n_{2}}-\\
+		&+ x(\tau) q  L_{n_{1}-1, n_{2}}+\lambda (1-q)L_{n_{1}, n_{2}-1} -\\
+		&+ x(\tau) (1-q) L_{n_{1}, n_{2}-1}+ \mu_{1} r_{0} (n_{1}+1)L_{n_{1} +1 , n_{2}} +\\
+		&+ \mu_{1} r_{2} (n_{1}+1) L_{n_{1} + 1, n_{2}}+ \mu_{2} r_{0} (n_{2}+1)L_{n_{1}, n_{2} + 1 }+\\
+		& + \mu_{2} r_{2} (n_{2}+1) L_{n_{1}, n_{2} + 1}+\\
+		&+\mu_{1} r_{1}(1-q)(n_{1}+1) L_{n_{1} +1 , n_{2}-1}+\\
+		&+\mu_{2} r_{1}q (n_{2}+1)L_{n_{1} -1 , n_{2}+1}=0
+	\end{split}
+\end{equation}
+Или
+\begin{equation}
+	\begin{split}
+		&L_{n_{1}, n_{2}}\{-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2}) - x(\tau)\overline{E}_{n_{1}+n_{2}}^N+ \mu_{1}r_{1}qn_{1}+ \mu_{2}r_{1}(1-q)n_{2}+ \lambda  E_{n_{1}+n_{2}}^N\}+\\
+		&+L_{n_{1}-1, n_{2}}\{\lambda q+ x(\tau) q  \}+\\
+		&+L_{n_{1}, n_{2}-1}\{\lambda (1-q) + x(\tau) (1-q) \}+\\
+		&+L_{n_{1} +1 , n_{2}}\{ \mu_{1} r_{0}(n_{1}+1) + \mu_{1} r_{2} (n_{1}+1)\}+\\
+		&+L_{n_{1}, n_{2} + 1 }\{ \mu_{2} r_{0} (n_{2}+1) + \mu_{2} r_{2} (n_{2}+1) \}+\\
+		&+ L_{n_{1} +1 , n_{2}-1}\mu_{1} r_{1}(1-q)(n_{1}+1)+\\
+		&+L_{n_{1} -1 , n_{2}+1}\mu_{2} r_{1}q(n_{2}+1) =0
+	\end{split}
+\end{equation}
+Чтобы доказать это утверждение \eqref{R} воспользуемся символьным исчеслением на языке Python, с помощью библиотеки SymPy [16]. Однако, чтобы сделать это, нужно избавится от индикаторов, поэтому рассмоторим разные случаи:\\
+
+$n_{1}=0, n_{2}=0$:\\
+\begin{equation}\label{rEquationLong0}
+	\begin{split}
+		&L_{0, 0}\{-\lambda - x(\tau)\}+\\
+		&+L_{1 , 0}\{\mu_{1} r_{0}+ \mu_{1} r_{2}\}\\
+		&+L_{0, 1 }\{ \mu_{2} r_{0}  + \mu_{2} r_{2}\}=0\\
+	\end{split}
+\end{equation}
+
+$n_{1}=0, n_{2} > 0\\
+n_{1}+n_{2}< N$:\\
+\begin{equation}\label{rEquationLong1}
+	\begin{split}
+		&L_{0, n_{2}}\{-(\lambda+\mu_{2}n_{2}) - x(\tau)+  \mu_{2}r_{1}(1-q)n_{2}\}+\\
+		&+L_{0, n_{2}-1}\{\lambda (1-q) + x(\tau) (1-q) \}\\
+		&+L_{1 , n_{2}}\{\mu_{1} r_{0} + \mu_{1} r_{2} \}\\
+		&+L_{0, n_{2} + 1 }\{ \mu_{2} r_{0} (n_{2}+1) + \mu_{2} r_{2} (n_{2}+1)\}+\\
+		&+L_{1 , n_{2}-1}\mu_{1} r_{1}(1-q) =0\\
+	\end{split}
+\end{equation}
+
+$n_{1}>0, n_{2} = 0\\
+n_{1}+n_{2}< N$:\\
+\begin{equation}\label{rEquationLong2}
+	\begin{split}
+		&L_{n_{1},0}\{-(\lambda+\mu_{1}n_{1}) - x(\tau) + \mu_{1}r_{1}qn_{1}\}+\\
+		&+L_{n_{1}-1, 0}\{\lambda q+ x(\tau) q  \}\\
+		&+L_{n_{1} +1 , 0}\{ \mu_{1} r_{0}(n_{1}+1) + \mu_{1} r_{2} (n_{1}+1)\}\\
+		&+L_{n_{1}, 1 }\{ \mu_{2} r_{0}  + \mu_{2} r_{2} (n_{2}+1)\}+\\
+		&+L_{n_{1} -1 , n_{2}+1}\mu_{2} r_{1}q(n_{2}+1) =0
+	\end{split}
+\end{equation}
+
+$n_{1}>0, n_{2}>0\\
+n_{1}+n_{2}< N$:\\
+\begin{equation}\label{rEquationLong3}
+	\begin{split}
+		&L_{n_{1}, n_{2}}\{-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2}) - x(\tau)+ \mu_{1}r_{1}qn_{1}+ \mu_{2}r_{1}(1-q)n_{2}\}+\\
+		&+L_{n_{1}-1, n_{2}}\{\lambda q+ x(\tau) q  \}\\
+		&+L_{n_{1}, n_{2}-1}\{\lambda (1-q) + x(\tau) (1-q) \}\\
+		&+L_{n_{1} +1 , n_{2}}\{ \mu_{1} r_{0}(n_{1}+1) + \mu_{1} r_{2} (n_{1}+1)\}\\
+		&+L_{n_{1}, n_{2} + 1 }\{ \mu_{2} r_{0}(n_{2}+1)  + \mu_{2} r_{2} (n_{2}+1) \}+\\
+		&+L_{n_{1} +1 , n_{2}-1}\mu_{1} r_{1}(1-q)(n_{1}+1) +\\
+		&+ L_{n_{1} -1 , n_{2}+1}\mu_{2} r_{1}q(n_{2}+1)=0
+	\end{split}
+\end{equation}
+
+$n_{1}=0, n_{2}=N:$\\
+\begin{equation}\label{rEquationLong4}
+	\begin{split}
+		&L_{0, N}\{-(\lambda+N\mu_{2}) + N\mu_{2}r_{1}(1-q)+ \lambda \}+\\
+		&+L_{0, N-1}\{\lambda (1-q) + x(\tau) (1-q) \}+\\
+		&+L_{1 ,N-1}\mu_{1} r_{1}(1-q) =0
+	\end{split}
+\end{equation}
+
+$n_{1}=N, n_{2}=0:$\\
+\begin{equation}\label{rEquationLong5}
+	\begin{split}
+		&L_{N, 0}\{-N\mu_{1}+ N\mu_{2}r_{1}q\}+\\
+		&+L_{N-1, 0}\{\lambda q+ x(\tau) q  \}\\
+		&+L_{N -1 , 1}\mu_{2} r_{1}q =0
+	\end{split}
+\end{equation}
+
+$n_{1}+n{2}=N,\\
+n{1}\neq N, n{2}\neq N$:\\
+\begin{equation}\label{rEquationLong6}
+	\begin{split}
+		&L_{n_{1}, n_{2}}\{-(\mu_{1}n_{1}+\mu_{2}n_{2}) + \mu_{1}r_{1}qn_{1}+ \mu_{2}r_{1}(1-q)n_{2}\}+\\
+		&+L_{n_{1}-1, n_{2}}\{\lambda q+ x(\tau) q  \}\\
+		&+L_{n_{1}, n_{2}-1}\{\lambda (1-q) +	 x(\tau) (1-q) \}\\
+		&+L_{n_{1} +1 , n_{2}-1}(n_{1}+1)\mu_{1} r_{1}(1-q) +\\
+		&+L_{n_{1} -1 , n_{2}+1}\mu_{2} r_{1}q(n_{2}+1) =0
+	\end{split}
+\end{equation}
+
+В результате выполнения программы [17] получим, что левая часть уравнения так же равна 0, при подстановки решения \eqref{R}, во всех случаях, кроме $n_{1}=0, n_{2}=N$.
+Результат выполнения следующий:
+\begin{adjustwidth}{-40pt}{100pt}
+\begin{equation*}
+-N\mu_{2}(qr_{z} - r{1} + 1)(\mu_{1}q(-\mu_{1}(q - 1))^{(N - 1)}(\lambda + x)^N - \mu_{1}(-\mu_{1}(q -1))^{(N - 1)}(\lambda + x)^N + (-\mu_{1}(\lambda q - \lambda + qx - x))^N)
+\end{equation*}
+\end{adjustwidth}
+По неизвестной причине, выражение не сокрашается до 0. Однако, если рассмотреть третию по счету скобку получим:\\
+\begin{align*}
+	&\mu_{1}q(-\mu_{1}(q - 1))^{(N - 1)}*(\lambda + x)^N - \mu_{1}(-\mu_{1}(q - 1))^{(N - 1)}(\lambda + x)^N + (-\mu_{1}(\lambda q - \lambda + qx - x))^N=\\
+	&=\mu_{1}q(\mu_{1}(1-q))^{(N - 1)}*(\lambda + x)^N - m1*(m1*(1-q))^(N - 1)*(\lambda + x)^N+\\
+	& + (m1(1-q)(l+x))^N=\\
+	&=(\mu_{1}(\lambda-q))^{(N - 1)}(\lambda + x)^N(\mu_{1}q - \mu_{1}) + (\mu_{1}*(1-q)*(\lambda+x))^N=\\
+	&=-(\mu_{1}(1-q))^N(\lambda + x)^N + (\mu_{1}(1-q)(\lambda+x))^N=0
+\end{align*}
+
+Следовательно, решение \eqref{R} верно и в данном случае.\\
+Заметим, что:\\
+\begin{align*}
+\sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}R_{n_{1},n_{2}}=1
+\end{align*}
+
+Для этого разделим полученне решения на сумму всех $L_{n_{1}, n_{2}}$\\
+Получим 
+\begin{equation*}
+	\begin{split} 
+		c=\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} L_{n_{1}, n_{2}}, R_{n_{1}, n_{2}}=\frac{L_{n_{1}, n_{2}}}{c}
+	\end{split}
+\end{equation*}

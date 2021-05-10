@@ -1,0 +1,39 @@
+Найдем $x=x(\tau)$ Рассмотрим второе уравнение системы (1) в пределе $\varepsilon \rightarrow 0$.
+\begin{align*}
+\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} \diffp{F_{n_{1}, n_{2}}(w,\tau)}{\tau}=
+&jw\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+F_{n_{1}, n_{2}}(w,\tau, \varepsilon)\\
+&+ j\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+\diffp{F_{n_{1}, n_{2}}(w,\tau)}{w}\\
+&+\mu_1 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+n_1 F_{n_{1}, n_{2}}(w,\tau)
++\mu_2 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+n_2 F_{n_{1}, n_{2}}(w,\tau)\}\\
+\end{align*} 
+и заменим решение $F_{n_{1}, n_{2}}(w,\tau)=R_{n_{1}, n_{2}}e^{jwx(\tau)}$, тогда
+\begin{equation}
+	\begin{aligned}
+		x'(\tau) =
+		&\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		R_{n_{1}, n_{2}}
+		- x(\tau)\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		R_{n_{1}, n_{2}}\\
+		&+\mu_1 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		n_1 R_{n_{1}, n_{2}}
+		+\mu_2 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		n_2 R_{n_{1}, n_{2}}\\
+	\end{aligned}
+\end{equation}
+Обозначим через
+\begin{equation}
+	\begin{aligned}
+		x'(\tau)=a(x)=&\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		R_{n_{1}, n_{2}}
+		- x(\tau)\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		R_{n_{1}, n_{2}}\\
+		&+\mu_1 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		n_1 R_{n_{1}, n_{2}}
+		+\mu_2 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		n_2 R_{n_{1}, n_{2}}
+	\end{aligned}
+\end{equation}

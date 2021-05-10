@@ -1,0 +1,83 @@
+Решение задачи (15) можно записать в виде
+\begin{align}
+F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}+O(\varepsilon^2),
+\end{align}
+где $\Phi (w,\tau)$ - скалярная функция, форма которой определена ниже.
+Мы получим \\
+ \begin{equation}
+	\begin{split}
+		j\varepsilon wa(x) \Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}=
+		&\Phi (w,\tau)\{\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}\{-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2}) +\\
+		&-x\overline{E}_{n_{1}+n_{2}}^N+\mu_{1}r_{1}q n_{1}+ \mu_{2}r_{1}(1-q)n_{2}+ \lambda E_{n_{1}+n_{2}}^N +j\varepsilon w \lambda E_{n_{1}+n_{2}}^N \}+\\
+		&+\{R_{n_{1}-1, n_{2}}+j\varepsilon w f_{n_{1}-1, n_{2}}\}\{\lambda q+ q  x-j\varepsilon wq x\}+\\
+		&+\{R_{n_{1}, n_{2}-1}+j\varepsilon w f_{n_{1}, n_{2}-1}\}\{\lambda (1-q)+\\
+		&+ (1-q) x -j\varepsilon w(1-q) x \}\\
+		&+ \{R_{n_{1}+1, n_{2}}+j\varepsilon w f_{n_{1}+1, n_{2}}\}\{\mu_{1} r_{0}(n_{1}+1)+\\
+		& + \mu_{1} r_{2}(n_{1}+1)+j\varepsilon w\mu_{1} r_{2}(n_{1}+1)\}+\\
+		&+ \{R_{n_{1}, n_{2}+1}+j\varepsilon w f_{n_{1}, n_{2}+1}\}\{\mu_{2} r_{0}(n_{2}+1)+\\
+		& + \mu_{2} r_{2} (n_{2}+1) +j\varepsilon w\mu_{2} r_{2} (n_{2}+1)\}+\\
+		&+\{R_{n_{1}+1, n_{2}+1}+j\varepsilon w f_{n_{1}-1, n_{2}-1}\}\mu_{1} r_{1}(1-q)(n_{1}+1) +\\
+		&+\{R_{n_{1}-1, n_{2}+1}+j\varepsilon w f_{n_{1}-1, n_{2}+1}\}(n_{2}+1)\mu_{2} r_{1}q\}  +\\
+		&+ \diffp{\Phi(w,t)}{w}\{j\varepsilon \overline{E}_{n_{1}+n_{2}}^N\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}-\\
+		&-  j\varepsilon q  \{R_{n_{1}-1, n_{2}}+j\varepsilon w f_{n_{1}-1, n_{2}}\}-\\
+		&- j \varepsilon (1-q) \{R_{n_{1}, n_{2}-1}+j\varepsilon w f_{n_{1}, n_{2}-1}\}\}
+	\end{split}
+\end{equation}
+Тогда
+ \begin{equation}
+	\begin{split}
+		j\varepsilon wa(x) \Phi (w,\tau)R_{n_{1}, n_{2}}=
+		&\Phi (w,\tau)\{\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}\{-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2}) +\\
+		&-x\overline{E}_{n_{1}+n_{2}}^N+\mu_{1}r_{1}q n_{1}+ \mu_{2}r_{1}(1-q)n_{2}+ \lambda E_{n_{1}+n_{2}}^N\} +j\varepsilon w \lambda E_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}} +\\
+		&+\{R_{n_{1}-1, n_{2}}+j\varepsilon w f_{n_{1}-1, n_{2}}\}\{\lambda q+ q  x\}-j\varepsilon wq xR_{n_{1}-1, n_{2}}+\\
+		&+\{R_{n_{1}, n_{2}-1}+j\varepsilon w f_{n_{1}, n_{2}-1}\}\{\lambda (1-q) +\\
+		&+ (1-q) x\} -j\varepsilon w(1-q) xR_{n_{1}, n_{2}-1} \\
+		&+ \{R_{n_{1}+1, n_{2}}+j\varepsilon w f_{n_{1}+1, n_{2}}\}\{\mu_{1} r_{0}(n_{1}+1)+\\
+		& + \mu_{1} r_{2}(n_{1}+1)\}+j\varepsilon w\mu_{1} r_{2}(n_{1}+1)R_{n_{1}+1, n_{2}}+\\
+		&+ \{R_{n_{1}, n_{2}+1}+j\varepsilon w f_{n_{1}, n_{2}+1}\}\{\mu_{2} r_{0}(n_{2}+1)+\\
+		& + \mu_{2} r_{2} (n_{2}+1)\} +j\varepsilon w\mu_{2} r_{2} (n_{2}+1)R_{n_{1}, n_{2}+1}+\\
+		&+\{R_{n_{1}+1, n_{2}+1}+j\varepsilon w f_{n_{1}-1, n_{2}-1}\}\mu_{1} r_{1}(1-q)(n_{1}+1) +\\
+		&+\{R_{n_{1}-1, n_{2}+1}+j\varepsilon w f_{n_{1}-1, n_{2}+1}\}(n_{2}+1)\mu_{2} r_{1}q\}  +\\
+		&+ \diffp{\Phi(w,t)}{w}\{j\varepsilon \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-  j\varepsilon q R_{n_{1}-1, n_{2}}-j \varepsilon (1-q) R_{n_{1}, n_{2}-1}\}
+	\end{split}
+\end{equation}
+
+С учетом (6) разделим последнее уравнение на $\Phi (w, \tau)j\varepsilon w$ и положим $\varepsilon \rightarrow 0$, мы получим
+
+ \begin{equation}
+	\begin{split}
+		a(x)R_{n_{1}, n_{2}}=
+		&f_{n_{1}, n_{2}}\{-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2}) +\\
+		&-x\overline{E}_{n_{1}+n_{2}}^N+\mu_{1}r_{1}q n_{1}+ \mu_{2}r_{1}(1-q)n_{2}+ \lambda E_{n_{1}+n_{2}}^N\} + E_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}} +\\
+		&+f_{n_{1}-1, n_{2}}\{\lambda q+ q  x\}-q xR_{n_{1}-1, n_{2}}+\\
+		&+ f_{n_{1}, n_{2}-1}\{\lambda (1-q)F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon) +\\
+		&+ (1-q) x\} -(1-q) xR_{n_{1}, n_{2}-1} \\
+		&+  f_{n_{1}+1, n_{2}}\{\mu_{1} r_{0}(n_{1}+1)+\\
+		& + \mu_{1} r_{2}(n_{1}+1)\}+\mu_{1} r_{2}(n_{1}+1)R_{n_{1}+1, n_{2}}+\\
+		&+ f_{n_{1}, n_{2}+1}\{\mu_{2} r_{0}(n_{2}+1)+\\
+		& + \mu_{2} r_{2} (n_{2}+1)\} +\mu_{2} r_{2} (n_{2}+1)R_{n_{1}, n_{2}+1}+\\
+		&+f_{n_{1}-1, n_{2}-1}\mu_{1} r_{1}(1-q)(n_{1}+1) +\\
+		&+ f_{n_{1}-1, n_{2}+1}(n_{2}+1)\mu_{2} r_{1}q  +\\
+		&+ \frac{\partial\Phi(w,t)/\partial w}{w\Phi(w,t)}\{ \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-   q R_{n_{1}-1, n_{2}}- (1-q) R_{n_{1}, n_{2}-1}\}
+	\end{split}
+\end{equation}
+переписываем последнее уравнение
+ \begin{equation}
+	\begin{split}
+		a(x)R_{n_{1}, n_{2}}=
+		&f_{n_{1}, n_{2}}\{-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2}) +\\
+		&-x\overline{E}_{n_{1}+n_{2}}^N+\mu_{1}r_{1}q n_{1}+ \mu_{2}r_{1}(1-q)n_{2}+ \lambda E_{n_{1}+n_{2}}^N\} + E_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}} +\\
+		&+f_{n_{1}-1, n_{2}}\{\lambda q+ q  x\}-q xR_{n_{1}-1, n_{2}}+\\
+		&+ f_{n_{1}, n_{2}-1}\{\lambda (1-q)F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon) +\\
+		&+ (1-q) x\} -(1-q) xR_{n_{1}, n_{2}-1} \\
+		&+  f_{n_{1}+1, n_{2}}\{\mu_{1} r_{0}(n_{1}+1)+\\
+		& + \mu_{1} r_{2}(n_{1}+1)\}+\mu_{1} r_{2}(n_{1}+1)R_{n_{1}+1, n_{2}}+\\
+		&+ f_{n_{1}, n_{2}+1}\{\mu_{2} r_{0}(n_{2}+1)+\\
+		& + \mu_{2} r_{2} (n_{2}+1)\} +\mu_{2} r_{2} (n_{2}+1)R_{n_{1}, n_{2}+1}+\\
+		&+f_{n_{1}-1, n_{2}-1}\mu_{1} r_{1}(1-q)(n_{1}+1) +\\
+		&+ f_{n_{1}-1, n_{2}+1}(n_{2}+1)\mu_{2} r_{1}q  +\\
+		&+ \frac{\partial\Phi(w,t)/\partial w}{w\Phi(w,t)}\{ \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-   q R_{n_{1}-1, n_{2}}- (1-q) R_{n_{1}, n_{2}-1}\}
+	\end{split}
+\end{equation}
+Решение f задачи (17) можно записать в виде
+

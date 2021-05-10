@@ -1,0 +1,63 @@
+Для данных вероятностей составим систему уравнений в конечных разностях [4,5,6]. 
+Для упрощения выражений введем индикатор:
+\begin{equation*}
+	E_a^b = 
+	\begin{cases}
+		1, &{a=b}\\
+		0, &{a \neq b}
+	\end{cases}
+\end{equation*}
+\begin{equation*}
+	\overline{E}_{a}^b = 1 - E_a^b
+\end{equation*}
+\begin{adjustwidth}{-40pt}{100pt}
+\begin{align*} 
+P_{n_{1}, n_{2}}(i,t+\Delta t)=&(1-\Delta t(\lambda+i\sigma \overline{E}_{n_{1}+n_{2}}^N+\mu_{1}n_{1}+\mu_{2}n_{2}))P_{n_{1}, n_{2}}(i,t)+\Delta t\mu_{1}r_{1}qn_{1}P_{n_{1}, n_{2}}(i,t)+\\
+&+\Delta t \mu_{2}(1-q)r_{1}n_{2}P_{n_{1}, n_{2}}(i,t)+\Delta t \lambda E_{n_{1}+n_{2}}^N P_{n_{1}, n_{2}}(i-1,t)+\\
+&+\Delta t\lambda qP_{n_{1}-1, n_{2}}(i,t) + \Delta t(i+1) \sigma q P_{n_{1}-1, n_{2}}(i+1,t)+\\
+&+\Delta t\lambda (1-q)P_{n_{1}, n_{2}-1}(i,t) + \Delta t(i+1) \sigma (1-q) P_{n_{1}, n_{2}-1}(i+1,t)+\\
+&+\Delta t \mu_{1} r_{0}(n_{1}+1) P_{n_{1} +1 , n_{2}}(i,t) + \Delta t \mu_{1} r_{2} (n_{1}+1) P_{n_{1} + 1, n_{2}}(i-1,t)+\\
+&+\Delta t \mu_{2} r_{0}(n_{2}+1) P_{n_{1}, n_{2} + 1 }(i,t) + \Delta t\mu_{2} r_{2} (n_{2}+1) P_{n_{1}, n_{2} + 1}(i-1,t)+\\
+&+\Delta t\mu_{1} r_{1}(1-q)(n_{1}+1) P_{n_{1} +1 , n_{2}-1}(i,t)+\Delta t\mu_{2} r_{1}q (n_{2}+1)P_{n_{1} -1 , n_{2}+1}(i,t)+o(\Delta t)
+\end{align*}
+\end{adjustwidth}
+У первого слагаемого в правой части перемножаем единицу на соответствующею вероятноь переносим полученное слагаемое со знаком минус в левую сторону, а после делим на $\Delta t$, получая данные уранения.
+\begin{adjustwidth}{-40pt}{100pt}
+	\begin{align*} 
+		\frac{P_{n_{1}, n_{2}}(i,t+\Delta t) - P_{n_{1}, n_{2}}(i, t)}{\Delta t}=&-(\lambda+i\sigma \overline{E}_{n_{1}+n_{2}}^N+\mu_{1}n_{1}+\mu_{2}n_{2})P_{n_{1}, n_{2}}(i,t)+ n_{1}\mu_{1}r_{1}qP_{n_{1}, n_{2}}(i,t)+\\
+		&+ \mu_{2}r_{1}(1-q)n_{2}P_{n_{1}, n_{2}}(i,t)+ \lambda E_{n_{1}+n_{2}}^N P_{n_{1}, n_{2}}(i-1,t)+\\
+		&+\lambda qP_{n_{1}-1, n_{2}}(i,t) + (i+1) \sigma q P_{n_{1}-1, n_{2}}(i+1,t)+\\
+		&+\lambda (1-q)P_{n_{1}, n_{2}-1}(i,t) + (i+1) \sigma (1-q) P_{n_{1}, n_{2}-1}(i+1,t)+\\
+		&+ \mu_{1} r_{0}(n_{1}+1) P_{n_{1} +1 , n_{2}}(i,t) + \mu_{1} r_{2} (n_{1}+1) P_{n_{1} + 1, n_{2}}(i-1,t)+\\
+		&+ \mu_{2} r_{0}(n_{2}+1) P_{n_{1}, n_{2} + 1 }(i,t) + \mu_{2} r_{2} (n_{2}+1) P_{n_{1}, n_{2} + 1}(i-1,t)+\\
+		&+\mu_{1} r_{1}(1-q)(n_{1}+1) P_{n_{1} +1 , n_{2}-1}(i,t)+\mu_{2} r_{1}q (n_{2}+1)P_{n_{1} -1 , n_{2}+1}(i,t) \\
+		&+o(\Delta t)/\Delta t
+	\end{align*}
+\end{adjustwidth}
+
+Пусть $\Delta t \rightarrow 0$
+\begin{adjustwidth}{-40pt}{100pt}
+	\begin{align*} 
+	\frac{dP_{n_{1}, n_{2}}(i,t)}{\partial t}=&-(\lambda+i\sigma \overline{E}_{n_{1}+n_{2}}^N+\mu_{1}n_{1}+\mu_{2}n_{2})P_{n_{1}, n_{2}}(i,t)+ \mu_{1}r_{1}qn_{1}P_{n_{1}, n_{2}}(i,t)+\\
+		&+\mu_{2}r_{1}(1-q) n_{2}P_{n_{1}, n_{2}}(i,t)+а \lambda E_{n_{1}+n_{2}}^N P_{n_{1}, n_{2}}(i-1,t)+\\
+		&+\lambda qP_{n_{1}-1, n_{2}}(i,t) + (i+1) \sigma q P_{n_{1}-1, n_{2}}(i+1,t)+\\
+		&+\lambda (1-q)P_{n_{1}, n_{2}-1}(i,t) + (i+1) \sigma (1-q) P_{n_{1}, n_{2}-1}(i+1,t)+\\
+		&+ \mu_{1} r_{0} (n_{1}+1)P_{n_{1} +1 , n_{2}}(i,t) + \mu_{1} r_{2} (n_{1}+1) P_{n_{1} + 1, n_{2}}(i-1,t)+\\
+		&+ \mu_{2} r_{0} (n_{2}+1)P_{n_{1}, n_{2} + 1 }(i,t) + \mu_{2} r_{2} (n_{2}+1) P_{n_{1}, n_{2} + 1}(i-1,t)+\\
+		&+\mu_{1} r_{1}(1-q)(n_{1}+1) P_{n_{1} +1 , n_{2}-1}(i,t)+\mu_{2} r_{1}q (n_{2}+1)P_{n_{1} -1 , n_{2}+1}(i,t) 
+	\end{align*}
+\end{adjustwidth}
+Введем частичные характерестические функции:
+$$H_{n_{1}, n_{2}}(u,t)=\sum_{i=0}^\infty e^{iuj}P_{n_{1}, n_{2}}(i,t)$$
+Тогда уравнения будут иметь вид:
+\begin{adjustwidth}{-40pt}{100pt}
+	\begin{align*} 
+		\diffp{H_{n_{1}, n_{2}}(u,t)}{t}=&-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})H_{n_{1}, n_{2}}(u,t) + j\sigma \overline{E}_{n_{1}+n_{2}}^N\diffp{H_{n_{1}, n_{2}}(u,t)}{u}+\\
+		&+\mu_{1}r_{1}q n_{1}H_{n_{1}, n_{2}}(u,t)+ \mu_{2}r_{1}(1-q)n_{2}H_{n_{1}, n_{2}}(u,t)+а \lambda e^{ju} E_{n_{1}+n_{2}}^N H_{n_{1}, n_{2}}(u,t)+\\
+		&+\lambda qH_{n_{1}-1, n_{2}}(u,t) - j \sigma q  e^{-ju} \diffp{H_{n_{1}-1, n_{2}}(i+1,t)}{u}+\\
+		&+\lambda (1-q)H_{n_{1}, n_{2}-1}(u,t) - j \sigma (1-q) e^{-ju} \diff{H_{n_{1}, n_{2}-1}(u,t)}{u}+\\
+		&+ \mu_{1} r_{0}(n_{1}+1) H_{n_{1} +1 , n_{2}}(u,t) + \mu_{1} r_{2}  e^{ju}(n_{1}+1)H_{n_{1} + 1, n_{2}}(u,t)+\\
+		&+ \mu_{2} r_{0}(n_{2}+1) H_{n_{1}, n_{2} + 1 }(u,t) + \mu_{2} r_{2}  e^{ju}(n_{2}+1) H_{n_{1}, n_{2} + 1}(u,t)+\\
+		&+\mu_{1} r_{1}(1-q)(n_{1}+1) H_{n_{1} +1 , n_{2}-1}(u,t)+(n_{2}+1)\mu_{2} r_{1}q H_{n_{1} -1 , n_{2}+1}(u,t) 
+	\end{align*}
+\end{adjustwidth}

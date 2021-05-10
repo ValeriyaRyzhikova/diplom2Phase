@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[condensed,math]{iwona}
+\usepackage[no-math]{fontspec}
+\setmainfont[Ligatures=TeX]{IwonaCond-Regular.otf}
+\usepackage[russian,english]{babel}
+\usepackage{changepage}
+\usepackage{amsmath}
+\usepackage[thinc]{esdiff}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\renewcommand*\contentsname{Содержание}
+
+\begin{document}
+	\subfile{titulList}
+	\newpage
+
+	\tableofcontents
+	\newpage
+	
+
+\section{Введение}
+
+	\subfile{introduction}
+	\newpage
+	
+
+\section{Математическая модель и постановка задач}
+
+	\subfile{mathModel}
+	\newpage
+	
+	\begin{center}
+		\section{Уравнения Колмогорова}
+	\end{center}
+	\subfile{KolmogorovFirst}
+	\subfile{firstEquationToSecond}
+	\newpage
+	\subfile{KolmogorovResult}
+	\newpage
+	
+\section{Первый этап асимтотического анализа}
+	\subfile{goToF}\\
+	\subfile{firstTheorem}
+	\subfile{proofFirstTheorem}\\
+	\subfile{goToSecond}
+	\newpage
+	
+\section{Второй этап асимтотического анализа}
+	\subfile{goToH1}
+	\subfile{goToF1}
+	\subfile{secondAsimptot}
+\end{document}
