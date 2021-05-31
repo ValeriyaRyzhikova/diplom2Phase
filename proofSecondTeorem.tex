@@ -1,0 +1,40 @@
+\textbf{Доказательство.}
+Перепишем \eqref{predB}
+\begin{equation}\label{withB}
+	\begin{split}
+		& \frac{\partial \Phi (w,\tau) /\partial\tau}{ \Phi (w,\tau)}=
+		\frac{(j w)^2}{2}\Phi (w,\tau)b(x)-w \frac{\partial \Phi (w,\tau)/\partial w}{ \Phi (w,\tau)}\bigg[\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\varphi_{n_{1}, n_{2}}+\\
+		&+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}\varphi_{n_{1}, n_{2}}+\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}\varphi_{n_{1}, n_{2}}-x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\varphi_{n_{1}, n_{2}}-\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}\bigg]
+	\end{split}
+\end{equation}
+Рассмотрим
+\begin{equation*}
+	\begin{split}
+		&\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\varphi_{n_{1}, n_{2}}+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}\varphi_{n_{1}, n_{2}}+\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}\varphi_{n_{1}, n_{2}}-\\
+		&-x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\varphi_{n_{1}, n_{2}}-\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}
+	\end{split}
+\end{equation*}
+
+используя замену \eqref{solutionPhi} в последнее выражение, мы можем получить
+
+\begin{equation}\label{parthWithA}
+	\begin{split}
+		&\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\diffp{R_{n_{1}, n_{2}}}{x}+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}\diffp{R_{n_{1}, n_{2}}}{x}+\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}\diffp{R_{n_{1}, n_{2}}}{x}-\\
+		&-x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\diffp{R_{n_{1}, n_{2}}}{x}-\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}
+	\end{split}
+\end{equation}
+
+Теперь рассмотрим уравнение \label{a(x)} для a(x), дифференцируем a(x) по x и учитывая, что R как решение зависит от x
+
+\begin{equation*}
+	\begin{aligned}\
+		&\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		\diffp{R_{n_{1}, n_{2}}}{x}
+		- x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		\diffp{R_{n_{1}, n_{2}}}{x}- \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1}R_{n_{1}, n_{2}}+\\
+		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
+		n_1 \diffp{R_{n_{1}, n_{2}}}{x}
+		+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
+		n_2 \diffp{R_{n_{1}, n_{2}}}{x}
+	\end{aligned}
+\end{equation*}

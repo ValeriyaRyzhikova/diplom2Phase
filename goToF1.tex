@@ -1,49 +1,48 @@
 Обозначим $\sigma = \varepsilon^{2}$ и сделаем следующие замены в \eqref{h1SystemOfEquation}
-\begin{align}
+\begin{align*}
 \tau=t\varepsilon^{2},u=\varepsilon w, H_{n_{1}, n_{2}}^{(1)}(u1,t)=F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)
-\end{align}
+\end{align*}
 Мы можем написать 
-\begin{equation}
+\begin{equation}\label{renameF1}
 	\begin{split}
-		\varepsilon^{2}\diffp{F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)}{t}&+j\varepsilon wa(x) F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=
+		\varepsilon^{2}\diffp{F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)}{t}&+j\varepsilon wa F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=
 		-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon) +\\
 		&+ j\varepsilon \overline{E}_{n_{1}+n_{2}}^N\diffp{F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)}{w}-x\overline{E}_{n_{1}+n_{2}}^NF_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
 		&+\mu_{1}r_{1}q n_{1}F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+ \mu_{2}r_{1}(1-q)n_{2}F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
 		&+ \lambda e^{j\varepsilon w} E_{n_{1}+n_{2}}^N F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
 		&+\lambda qF_{n_{1}-1, n_{2}}^{(1)}(w,\tau,\varepsilon) - j \varepsilon q  e^{-j\varepsilon w} \diffp{F_{n_{1}-1, n_{2}}^{(1)}(w,\tau,\varepsilon)}{w}+\\
 		&+ q  e^{-ju} xF_{n_{1}-1, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
-		&+\lambda (1-q)F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon) - j \varepsilon (1-q) e^{-j\varepsilon w} \diff{F_{n_{1}, n_{2}-1}(w,\tau,\varepsilon)}{w}+\\
-		&+ (1-q) e^{-j\varepsilon w} x F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)\\
+		&+\lambda (1-q)F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon) - j \varepsilon (1-q) e^{-j\varepsilon w} \diff{F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)}{w}+\\
+		&+ (1-q) e^{-j\varepsilon w} x F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)+\\
 		&+ \mu_{1} r_{0}(n_{1}+1) F_{n_{1} +1 , n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
 		& + \mu_{1} r_{2}  e^{j \varepsilon w}(n_{1}+1)F_{n_{1} + 1, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
 		&+ \mu_{2} r_{0}(n_{2}+1) F_{n_{1}, n_{2} + 1 }^{(1)}(w,\tau,\varepsilon)+\\
 		& + \mu_{2} r_{2}  e^{j\varepsilon w}(n_{2}+1) F_{n_{1}, n_{2} + 1}^{(1)}(w,\tau,\varepsilon)+\\
 		&+\mu_{1} r_{1}(1-q)(n_{1}+1) F_{n_{1} +1 , n_{2}-1}^{(1)}(w,\tau,\varepsilon)+\\
 		&+(n_{2}+1)\mu_{2} r_{1}q F_{n_{1} -1 , n_{2}+1}^{(1)}(w,\tau,\varepsilon) ,\\
-		\varepsilon^{2}\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\{ \diffp{F_{n_1,n_2}^{(1)}(w,\tau,\varepsilon)}{t}&+j\varepsilon a(x) F_{n_1,n_2}^{(1)}(w,\tau,\varepsilon)\}=
-		(e^{j\varepsilon w} - 1)\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
-		F_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)\\
-		&+\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
-		\{ j \varepsilon e^{-j\varepsilon w}\diffp{j F_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)}{u}-\\
-		&-xF_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)\}\\
-		&+\mu_1 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		\varepsilon^{2}\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\bigg\{ \diffp{F_{n_1,n_2}^{(1)}(w,\tau,\varepsilon)}{t}&+j\varepsilon a F_{n_1,n_2}^{(1)}(w,\tau,\varepsilon)\bigg\}=
+		(e^{j\varepsilon w} - 1)\bigg\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		F_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)+\\
+		&+e^{-j\varepsilon w} \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		\bigg[ j \varepsilon \diffp{ F_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)}{u}-xF_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)\bigg]\\
+		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 		n_1 F_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)+\\
-		&+\mu_2 r_2 \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
-		n_2 F_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)\}\
+		&+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
+		n_2 F_{n_1, n_2}^{(1)}(w,\tau,\varepsilon)\bigg\}\
 	\end{split}
 \end{equation}
- Запишем первое уравнение (12) с точностью до О($\varepsilon^2$)
+ Запишем первое уравнение \eqref{renameF1} с точностью до О($\varepsilon^2$)
  \begin{equation}
- 	\begin{split}
- 	    j\varepsilon wa(x) F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=
+ 	\begin{split}\label{F1E2goto0}
+ 	    j\varepsilon wa F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=
  		&-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon) +\\
  		&+ j\varepsilon \overline{E}_{n_{1}+n_{2}}^N\diffp{F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)}{w}-x\overline{E}_{n_{1}+n_{2}}^NF_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
  		&+\mu_{1}r_{1}q n_{1}F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+ \mu_{2}r_{1}(1-q)n_{2}F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
  		&+ \lambda E_{n_{1}+n_{2}}^N F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+j\varepsilon w \lambda E_{n_{1}+n_{2}}^N F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
  		&+\lambda qF_{n_{1}-1, n_{2}}^{(1)}(w,\tau,\varepsilon) -  \varepsilon q  \diffp{F_{n_{1}-1, n_{2}}^{(1)}(w,\tau,\varepsilon)}{w}+\\
  		&+ q  xF_{n_{1}-1, n_{2}}^{(1)}(w,\tau,\varepsilon)-j\varepsilon wq xF_{n_{1}-1, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
- 		&+\lambda (1-q)F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon) - j \varepsilon (1-q) \diff{F_{n_{1}, n_{2}-1}(w,\tau,\varepsilon)}{w}+\\
- 		&+ (1-q) x F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)-j\varepsilon w(1-q) x F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)\\
+ 		&+\lambda (1-q)F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon) - j \varepsilon (1-q) \diff{F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)}{w}+\\
+ 		&+ (1-q) x F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)-j\varepsilon w(1-q) x F_{n_{1}, n_{2}-1}^{(1)}(w,\tau,\varepsilon)+\\
  		&+ \mu_{1} r_{0}(n_{1}+1) F_{n_{1} +1 , n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
  		& + \mu_{1} r_{2}(n_{1}+1)F_{n_{1} + 1, n_{2}}^{(1)}(w,\tau,\varepsilon)+j\varepsilon w\mu_{1} r_{2}(n_{1}+1)F_{n_{1} + 1, n_{2}}^{(1)}(w,\tau,\varepsilon)+\\
  		&+ \mu_{2} r_{0}(n_{2}+1) F_{n_{1}, n_{2} + 1 }^{(1)}(w,\tau,\varepsilon)+\\

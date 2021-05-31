@@ -1,0 +1,72 @@
+Сравнивая это равенство и \eqref{parthWithA}, запишем уравнение \eqref{withB} в виде
+\begin{align}\label{newWithB}
+\frac{\partial \Phi (w,\tau)}{\partial \tau}=a'(x) w\frac{\partial \Phi (w,\tau)}{\partial w}+\frac{(jw)^2}{2}b(x)\Phi(w,\tau)
+\end{align}
+Уравнение \eqref{newWithB} это преобразование Фурье уравнения Фокера-Планка для плотности распределения вероятностей $P(y, \tau )$ значений центрированного и номированного количества заявок на орбите. Находя обратное преобразование Фурье от \eqref{newWithB} мы получаем
+\begin{align}
+	\frac{\partial P (y,\tau)}{\partial \tau}=-\frac{\partial}{\partial y}\{a'(x)yP(y,\tau)\} 
+	+\frac{1}{2}\frac{\partial^2}{\partial y^2}\{b(x)P(y,\tau)\}
+\end{align}
+Если мы составили уравнение Фокера-Планка для функции, значит это функция является плотностью распределения вероятностей для диффузионного процесса [2], который мы обозначим $y(\tau)$ с коэффецентом переносом a(x) и коэффецентом диффузии b(x) 
+\begin{align}
+	dy(\tau)=a'(x)yd\tau+\sqrt{b(x)}dw(\tau).
+\end{align}
+Рассматривая стохастический процесс нормированного числа заявок на орбите
+\begin{align}
+	z(\tau)=x(\tau)+\varepsilon y(\tau),
+\end{align}
+где $\varepsilon=\sqrt{\sigma}$, исходя из \eqref{a(x)} $dx(\tau)=a(x)d\tau$, следовательно
+\begin{align}\label{bz}
+	dz(\tau)=d(x(\tau)+\varepsilon y(\tau))=(a(x)+\varepsilon ya'(x))d\tau+\varepsilon \sqrt{b(x)}dw(\tau).
+\end{align}
+Затем выполняя разложение получаем 
+\begin{align*}
+	&a(z)=a(x+\varepsilon y)=a(x)+\varepsilon y a'(x)+O(\varepsilon^2),\\
+	&\varepsilon\sqrt{b(z)}=\varepsilon\sqrt{b(x+\varepsilon y)}=\varepsilon\sqrt{b(x)+O(\varepsilon)}=\sqrt{\sigma b(x)}+O(\varepsilon)
+\end{align*}
+После переписываем уравнение \eqref{bz} с точностью до $O(\varepsilon^2)$
+\begin{align}\label{newBz}
+	dz(\tau)=a(z)d\tau+\sqrt{\sigma b(z)}dw(\tau).
+\end{align}
+Обозначим плотность распределения вероятностей для процесса $z(\tau)$
+\begin{align*}
+	\pi(z,\tau)=\frac{\partial P\{z(\tau)<z\}}{\partial z}
+\end{align*}
+Так как $z(\tau)$ это решение стохастического дифференциального уравнения \eqref{newBz}, следовательно процесс является диффузионным процессом и для его плотности распределения вероятностей мы можем записать уравнение Фокера-Планка
+\begin{align}
+\frac{\partial \pi (z,\tau)}{\partial \tau}=-\frac{\partial}{\partial z}\{a(z)\pi(z,\tau)\} 
++\frac{1}{2}\frac{\partial^2}{\partial z^2}\{\sigma b(z)\pi(z,\tau)\}.
+\end{align}
+Предполагая, что существует стационарный режим 
+\begin{align}
+\pi (z,\tau)=\pi(z),
+\end{align}
+Пишем уравнение Фокера-Планка для стационарного распределения вероятностей $\pi{(z)}$ 
+\begin{align*}
+(a(z)\pi(z))'+\frac{\sigma}{2}(b(z)\pi(z))''=0,\\
+-a(z)\pi(z)+\frac{\sigma}{2}(b(z)\pi(z))'=0.
+\end{align*}
+Решая данную систему уравнений мы получаем плотность распределения вероятностей $\pi{(z)}$ нормировонного числа заявок на орбите
+\begin{align}
+\pi (z)= \frac{C}{b(z)}exp\{\frac{2}{\sigma} \int\limits_0^z \frac{a(x)}{b(x)}dx\}
+\end{align} 
+После чего можем получить дискретное распределение вероятностей
+\begin{align}
+P(i)=\pi(\sigma i)/\sum\limits_{i=0}^{\infty} \pi(\sigma i)
+\end{align} 
+Которое называем диффузионной аппроксимацией дискретного распределения вероятностей заявок на орбите для изучаемой системы.\\
+
+Нетрудно показать, что условие существования стационарного
+режима рассматриваемой системы является неравенство[8]
+\begin{align}\label{uslStat}
+\lambda<Nr_{0}\ (\frac{q}{\mu_{1}}+\frac{1-q}{\mu_{2}}).
+\end{align}
+
+Введем следующую замену для того, чтобы среднее время обслуживания равнялось еденице.
+\begin{align*}
+q=\frac{\mu_{1}(1-\mu_{2})}{\mu_{1}-\mu_{2}}
+\end{align*}
+В таком случаее неравество \eqref{uslStat} имеет вид
+\begin{align*}
+\lambda<Nr_{0}.
+\end{align*}

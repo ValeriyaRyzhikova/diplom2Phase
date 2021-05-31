@@ -1,14 +1,24 @@
 \documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
 \usepackage[condensed,math]{iwona}
 \usepackage[no-math]{fontspec}
 \setmainfont[Ligatures=TeX]{IwonaCond-Regular.otf}
-\usepackage[russian,english]{babel}
+\usepackage[russian]{babel}
 \usepackage{changepage}
 \usepackage{amsmath}
 \usepackage[thinc]{esdiff}
 \usepackage{subfiles}
-\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 \renewcommand*\contentsname{Содержание}
+
+
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath,amsfonts,amssymb,amsthm, bm}
+\usepackage{lipsum}
+\usepackage{float}
+\setlength{\parindent}{5ex}
+\setlength{\parskip}{1em}
 
 \begin{document}
 	\subfile{titulList}
@@ -49,4 +59,16 @@
 	\subfile{goToH1}
 	\subfile{goToF1}
 	\subfile{secondAsimptot}
+	\newpage
+	
+\section{Метод асимтотическо диффузионного анализа}
+	\subfile{secondTeorem}
+	\subfile{proofSecondTeorem}
+	\subfile{diffAnaliz}
+	\subfile{graphics}
+	\newpage 
+
+\section{Литература}
+	\subfile{litreche}
+	\newpage
 \end{document}

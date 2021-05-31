@@ -1,0 +1,38 @@
+\textbf{ Теорема 2.} Плотность распределения вероятностей нормировоного числа заявок с орбиты имеют вид
+\begin{align}
+\pi (z)= \frac{C}{b(z)}exp\{\frac{2}{\sigma} \int\limits_0^z \frac{a(x)}{b(x)}dx\}
+\end{align} 
+где C – нормираванная константа,
+\begin{equation*}
+	\begin{aligned}\
+		a(x)=&\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		R_{n_{1}, n_{2}}
+		- x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
+		R_{n_{1}, n_{2}}+\\
+		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
+		n_1 R_{n_{1}, n_{2}}
+		+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
+		n_2 R_{n_{1}, n_{2}},
+	\end{aligned}
+\end{equation*}
+\begin{equation*}
+	\begin{aligned}
+		&b(x)=2\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}g_{n_{1}, n_{2}}+2\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}g_{n_{1}, n_{2}}+2\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}g_{n_{1}, n_{2}}-\\
+		&-2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}g_{n_{1}, n_{2}}+2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}+a
+	\end{aligned}
+\end{equation*}
+
+здесь g определяеться системой уравнений
+\begin{equation*}\label{sistemG}
+	\begin{split}
+		&g_{n_{1}, n_{2}}(-(\lambda +\mu_{1} n_{1}+\mu_{2} n_{2})+\mu_{1} r_{1} q n_{1}+ \mu_{2} r_{1} (1-q) n_{2} + \lambda E_{n_{1} + n_{2}}^{N} - x\overline{E}_{n_{1} + n_{2}}^{N})+\\
+		&+g_{n_{1}-1, n_{2}}(\lambda q \overline{E}_{n_{1}}^{0}+xq\overline{E}_{n_{1}}^{0})+g_{n_{1}, n_{2}-1}(\lambda (1-q) \overline{E}_{n_{2}}^{0}+x(1-q)\overline{E}_{n_{2}}^{0})+\\
+		&+g_{n_{1}+1, n_{2}}(\mu_{1} r_{0}(n_{1}+1)\overline{E}_{n_{1} + n_{2}}^{N} + \mu_{1} r_{2}(n_{1}+1)\overline{E}_{n_{1} + n_{2}}^{N})+\\
+		&+g_{n_{1}, n_{2}+1}(\mu_{2} r_{0}(n_{2}+1)\overline{E}_{n_{} + n_{2}}^{N} + \mu_{2} r_{2}(n_{2}+1)\overline{E}_{n_{1} + n_{2}}^{N})+\\
+		&+g_{n_{1}+1, n_{2}-1}(1-q)\mu_{1} r_{1} (n_{1}+1)+g{n_{1-1, n_{2}+1}}q\mu_{2}r_{1}(n_{2}+1)=\\
+		&=R_{n_{1}, n_{2}}a-\lambda R_{n_{1}, n_{2}} +x q E_{n_{1}}^{0} R_{n_{1}-1, n_{2}}+x (1-q) \overline{E}_{n_{2}}^{0} R_{n_{1}, n_{2}-1}\\
+		&-\mu_{1}r_{2}(n_{1}+1)R_{n_{1}+1, n_{2}}\overline{E}_{n_{1} + n_{2}}^{N}-\mu_{2}r_{2}(n_{2}+1)R_{n_{1}, n_{2}+1}\overline{E}_{n_{1} + n_{2}}^{N},\\
+		&\sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}g_{n_{1}, n_{2}}=0
+	\end{split}
+\end{equation*}
+
