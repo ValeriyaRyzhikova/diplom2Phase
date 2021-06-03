@@ -2,8 +2,9 @@
 \begin{align}\label{expansionF}
 F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}+O(\varepsilon^2),
 \end{align}
-где $\Phi (w,\tau)$ - скалярная функция, форма которой определена ниже.
-Мы получим \\
+где $\Phi (w,\tau)$ -- скалярная функция, форма которой определена ниже. \\
+\hspace*{\parindent}%
+Получим \\
  \begin{equation}
 	\begin{split}
 		j\varepsilon wa \Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}=
@@ -20,7 +21,7 @@ F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\var
 		&+\{R_{n_{1}-1, n_{2}+1}+j\varepsilon w f_{n_{1}-1, n_{2}+1}\}(n_{2}+1)\mu_{2} r_{1}q\}  +\\
 		&+ \diffp{\Phi(w,t)}{w}\{j\varepsilon \overline{E}_{n_{1}+n_{2}}^N\{R_{n_{1}, n_{2}}+j\varepsilon w f_{n_{1}, n_{2}}\}-\\
 		&-  j\varepsilon q  \{R_{n_{1}-1, n_{2}}+j\varepsilon w f_{n_{1}-1, n_{2}}\}-\\
-		&- j \varepsilon (1-q) \{R_{n_{1}, n_{2}-1}+j\varepsilon w f_{n_{1}, n_{2}-1}\}\}
+		&- j \varepsilon (1-q) \{R_{n_{1}, n_{2}-1}+j\varepsilon w f_{n_{1}, n_{2}-1}\}\}.
 	\end{split}
 \end{equation}
 Тогда
@@ -38,11 +39,11 @@ F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\var
 		& + \mu_{2} r_{2} (n_{2}+1)\} +j\varepsilon w\mu_{2} r_{2} (n_{2}+1)R_{n_{1}, n_{2}+1}+\\
 		&+\{R_{n_{1}+1, n_{2}+1}+j\varepsilon w f_{n_{1}-1, n_{2}-1}\}\mu_{1} r_{1}(1-q)(n_{1}+1) +\\
 		&+\{R_{n_{1}-1, n_{2}+1}+j\varepsilon w f_{n_{1}-1, n_{2}+1}\}(n_{2}+1)\mu_{2} r_{1}q\}  +\\
-		&+ \diffp{\Phi(w,t)}{w}\{j\varepsilon \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-  j\varepsilon q R_{n_{1}-1, n_{2}}-j \varepsilon (1-q) R_{n_{1}, n_{2}-1}\}
+		&+ \diffp{\Phi(w,t)}{w}\{j\varepsilon \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-  j\varepsilon q R_{n_{1}-1, n_{2}}-j \varepsilon (1-q) R_{n_{1}, n_{2}-1}\}.
 	\end{split}
 \end{equation*}
 
-С учетом \eqref{sistForR} разделим последнее уравнение на $\Phi (w, \tau)j\varepsilon w$ и положим $\varepsilon \rightarrow 0$, мы получим
+С учетом \eqref{sistForR} разделим последнее уравнение на $\Phi (w, \tau)j\varepsilon w$ и положим $\varepsilon \rightarrow 0$
 
  \begin{equation*}
 	\begin{split}
@@ -58,10 +59,10 @@ F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\var
 		& + \mu_{2} r_{2} (n_{2}+1)\} +\mu_{2} r_{2} (n_{2}+1)R_{n_{1}, n_{2}+1}+\\
 		&+f_{n_{1}-1, n_{2}-1}\mu_{1} r_{1}(1-q)(n_{1}+1) +\\
 		&+ f_{n_{1}-1, n_{2}+1}(n_{2}+1)\mu_{2} r_{1}q  +\\
-		&+ \frac{\partial\Phi(w,t)/\partial w}{w\Phi(w,t)}\{ \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-   q R_{n_{1}-1, n_{2}}- (1-q) R_{n_{1}, n_{2}-1}\}
+		&+ \frac{\partial\Phi(w,t)/\partial w}{w\Phi(w,t)}\{ \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-   q R_{n_{1}-1, n_{2}}- (1-q) R_{n_{1}, n_{2}-1}\}.
 	\end{split}
 \end{equation*}
-переписываем последнее уравнение
+Перепишем последнее уравнение
 
  \begin{equation}\label{sistemForF}
 	\begin{split}
@@ -74,14 +75,14 @@ F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\var
 		&+ f_{n_{1}-1, n_{2}+1}(n_{2}+1)\mu_{2} r_{1}q  =\\
 		& =-aR_{n_{1}, n_{2}}+ E_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}} -q xR_{n_{1}-1, n_{2}} -(1-q) xR_{n_{1}, n_{2}-1}+\\
 		& +\mu_{1} r_{2}(n_{1}+1)R_{n_{1}+1, n_{2}} +\mu_{2} r_{2} (n_{2}+1)R_{n_{1}, n_{2}+1}+\\
-		&+ \frac{\partial\Phi(w,t)/\partial w}{w\Phi(w,t)}\{ \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-   q R_{n_{1}-1, n_{2}}- (1-q) R_{n_{1}, n_{2}-1}\}
+		&+ \frac{\partial\Phi(w,t)/\partial w}{w\Phi(w,t)}\{ \overline{E}_{n_{1}+n_{2}}^NR_{n_{1}, n_{2}}-   q R_{n_{1}-1, n_{2}}- (1-q) R_{n_{1}, n_{2}-1}\}.
 	\end{split}
 \end{equation}
 
-Решение f задачи \eqref{sistemForF} можно записать в виде \\
+Решение $f_{n_1, n_2}$ можно записать в виде \\
  \begin{equation}\label{solutionForF}
 	\begin{split}
-		&f_{n_{1}, n_{2}}=СR_{n_{1}, n_{2}}+g-\varphi\frac{\partial \Phi(w,t)/ \partial w}{w\Phi(w,t)}
+		&f_{n_{1}, n_{2}}=СR_{n_{1}, n_{2}}+g-\varphi\frac{\partial \Phi(w,t)/ \partial w}{w\Phi(w,t)},
 	\end{split}
 \end{equation}
 
@@ -93,10 +94,10 @@ F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\var
 		&+\varphi_{n_{1}+1, n_{2}}(\mu_{1} r_{0}(n_{1}+1)\overline{E}_{n_{1} + n_{2}}^{N} + \mu_{1} r_{2}(n_{1}+1)\overline{E}_{n_{1} + n_{2}}^{N})+\\
 		&+\varphi_{n_{1}, n_{2}+1}(\mu_{2} r_{0}(n_{2}+1)\overline{E}_{n_{} + n_{2}}^{N} + \mu_{2} r_{2}(n_{2}+1)\overline{E}_{n_{1} + n_{2}}^{N})+\\
 		&+\varphi_{n_{1}+1, n_{2}-1}(1-q)\mu_{1} r_{1} (n_{1}+1)+\varphi_{n_{1-1, n_{2}+1}}q\mu_{2}r_{1}(n_{2}+1)=\\
-		&=R_{n_{1}, n_{2}} x\overline{E}_{n_{1} + n_{2}}^{N}-R_{n_{1}-1, n_{2}}xq\overline{E}_{n_{1}}^{0}-R_{n_{1}, n_{2}-1}x(1-q)\overline{E}_{n_{2}}^{0}
+		&=R_{n_{1}, n_{2}} x\overline{E}_{n_{1} + n_{2}}^{N}-R_{n_{1}-1, n_{2}}xq\overline{E}_{n_{1}}^{0}-R_{n_{1}, n_{2}-1}x(1-q)\overline{E}_{n_{2}}^{0},
 	\end{split}
 \end{equation*}
- \begin{equation}\label{sistemG}
+ \begin{equation}\label{sistemaG}
 	\begin{split}
 		&g_{n_{1}, n_{2}}(-(\lambda +\mu_{1} n_{1}+\mu_{2} n_{2})+\mu_{1} r_{1} q n_{1}+ \mu_{2} r_{1} (1-q) n_{2} + \lambda E_{n_{1} + n_{2}}^{N} - x\overline{E}_{n_{1} + n_{2}}^{N})+\\
 		&+g_{n_{1}-1, n_{2}}(\lambda q \overline{E}_{n_{1}}^{0}+xq\overline{E}_{n_{1}}^{0})+g_{n_{1}, n_{2}-1}(\lambda (1-q) \overline{E}_{n_{2}}^{0}+x(1-q)\overline{E}_{n_{2}}^{0})+\\
@@ -104,11 +105,11 @@ F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\var
 		&+g_{n_{1}, n_{2}+1}(\mu_{2} r_{0}(n_{2}+1)\overline{E}_{n_{} + n_{2}}^{N} + \mu_{2} r_{2}(n_{2}+1)\overline{E}_{n_{1} + n_{2}}^{N})+\\
 		&+g_{n_{1}+1, n_{2}-1}(1-q)\mu_{1} r_{1} (n_{1}+1)+g{n_{1-1, n_{2}+1}}q\mu_{2}r_{1}(n_{2}+1)=\\
 		&=R_{n_{1}, n_{2}}a-\lambda R_{n_{1}, n_{2}} +x q E_{n_{1}}^{0} R_{n_{1}-1, n_{2}}+x (1-q) \overline{E}_{n_{2}}^{0} R_{n_{1}, n_{2}-1}\\
-		&-\mu_{1}r_{2}(n_{1}+1)R_{n_{1}+1, n_{2}}\overline{E}_{n_{1} + n_{2}}^{N}-\mu_{2}r_{2}(n_{2}+1)R_{n_{1}, n_{2}+1}\overline{E}_{n_{1} + n_{2}}^{N}
+		&-\mu_{1}r_{2}(n_{1}+1)R_{n_{1}+1, n_{2}}\overline{E}_{n_{1} + n_{2}}^{N}-\mu_{2}r_{2}(n_{2}+1)R_{n_{1}, n_{2}+1}\overline{E}_{n_{1} + n_{2}}^{N}.
 	\end{split}
 \end{equation}
 
-Рассмотрим первое уравнение системы \eqref{sistForR}, дифференцируем его по x, получим уравнение
+Рассмотрим первое уравнение системы \eqref{sistForR}, дифференцируем его по $x$, получим уравнение
 \begin{equation}\label{findPhi}
 	\begin{split}
 		&\diffp{R_{n_{1}, n_{2}}}{x}\{-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2}) - x(\tau)\overline{E}_{n_{1}+n_{2}}^N+ \mu_{1}r_{1}qn_{1}+ \mu_{2}r_{1}(1-q)n_{2}+ \lambda  E_{n_{1}+n_{2}}^N\}+\\
@@ -118,43 +119,49 @@ F_{n_{1}, n_{2}}^{(1)}(w,\tau,\varepsilon)=\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\var
 		&+\diffp{R_{n_{1}, n_{2} + 1 }}{x}\{ \mu_{2} r_{0} (n_{2}+1) + \mu_{2} r_{2} (n_{2}+1) \}+\\
 		&+ \diffp{R_{n_{1} +1 , n_{2}-1}}{x}\mu_{1} r_{1}(1-q)(n_{1}+1)+\\
 		&+\diffp{R_{n_{1} -1 , n_{2}+1}}{x}\mu_{2} r_{1}q(n_{2}+1)-\\
-		&-R_{n_{1}, n_{2}} x\overline{E}_{n_{1} + n_{2}}^{N}+R_{n_{1}-1, n_{2}}xq\overline{E}_{n_{1}}^{0}+R_{n_{1}, n_{2}-1}x(1-q)\overline{E}_{n_{2}}^{0}=0
+		&-R_{n_{1}, n_{2}} x\overline{E}_{n_{1} + n_{2}}^{N}+R_{n_{1}-1, n_{2}}xq\overline{E}_{n_{1}}^{0}+R_{n_{1}, n_{2}-1}x(1-q)\overline{E}_{n_{2}}^{0}=0.
 	\end{split}
 \end{equation}
-Учитывая \eqref{findPhi} и последнее уравнение для $\varphi$, запишем важное равенство
+
+Учитывая \eqref{findPhi} и последнее уравнение для $\varphi$, запишем равенство
 \begin{align}\label{solutionPhi}
-	\varphi_{n_{1}, n_{2}}=\diffp{R_{n_{1}, n_{2}}}{x}
+	\varphi_{n_{1}, n_{2}}=\diffp{R_{n_{1}, n_{2}}}{x},
 \end{align}
-где $\sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}\varphi_{n_{1}, n_{2}}=0$
-В силу \eqref{sistemG} $g$ является частным решением системы \eqref{findPhi}. Cледовательно, она удовлетворяет некоторому дополнительному условию, которое мы выберем в виде $\sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}g_{n_{1}, n_{2}}=0$. Тогда решение $g$ системы \eqref{findPhi}, удовлетворяющее условию
-$\sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}g_{n_{1}, n_{2}}=0$, определяется однозначно. Теперь рассмотрим второе уравнение системы \eqref{renameF1}, в которую подставляем разложение \eqref{expansionF}
+где $\sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}\varphi_{n_{1}, n_{2}}=0$.
+В силу \eqref{sistemaG} $g_{n_1, n_2}$ является частным решением системы \eqref{findPhi}. Cледовательно, она удовлетворяет условию\\
+\begin{equation}\label{uslov}
+ \sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}g_{n_{1}, n_{2}}=0.
+\end{equation} 
+Тогда решение $g_{n_1, n_2}$ системы \eqref{findPhi}, удовлетворяющее условию
+\eqref{uslov}, определяется однозначно.\\
+ Теперь рассмотрим второе уравнение системы \eqref{renameF1}, в которую подставляем разложение \eqref{expansionF}
 
 \begin{equation*}
 	\begin{split}
 		&\varepsilon^2 \frac{\partial \Phi (w,\tau)}{\partial \tau}+ja\varepsilon w \Phi (w,\tau)\bigg\{1+j\varepsilon w\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}f_{n_{1}, n_{2}}\bigg\}=\\
 		&=(j\varepsilon w +\frac{(j\varepsilon w)^2}{2})\bigg[\lambda \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon wf_{n_{1}, n_{2}}\}+\\
 		&+\mu_{1} r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon wf_{n_{1}, n_{2}}\}+\mu_{2} r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon wf_{n_{1}, n_{2}}\}+\\
-		&+j\varepsilon\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\diffp{\Phi_{n_{1}, n_{2}}}{w}-(1-j\varepsilon w)x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon wf_{n_{1}, n_{2}}\}\bigg]
+		&+j\varepsilon\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\diffp{\Phi_{n_{1}, n_{2}}}{w}-(1-j\varepsilon w)x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\Phi (w,\tau)\{R_{n_{1}, n_{2}}+j\varepsilon wf_{n_{1}, n_{2}}\}\bigg].
 	\end{split}
 \end{equation*}
 
-Тогда с помощью уравнения \eqref{a(x)}
+Тогда с помощью уравнения \eqref{a_func}
 
 \begin{equation*}
 	\begin{split}
 		&\varepsilon^2 \frac{\partial \Phi (w,\tau)}{\partial \tau}=(jw\varepsilon)^2\Phi (w,\tau)\bigg[\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}f_{n_{1}, n_{2}}+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}f_{n_{1}, n_{2}}+\mu_{2} r_{2}\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}n_{2}f_{n_{1}, n_{2}}-\\
 		&-x\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}f_{n_{1}, n_{2}}+x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}-a\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}f_{n_{1}, n_{2}}\bigg] +\frac{(j\varepsilon w)^2}{2}\Phi (w,\tau)\bigg[\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}R_{n_{1}, n_{2}}+\\
-		&+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}R_{n_{1}, n_{2}}+\mu_{2} r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}R_{n_{1}, n_{2}}-x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}\bigg]+(j\varepsilon)^2 w\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}\diffp{\Phi_{n_{1}, n_{2}}}{w}
+		&+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}R_{n_{1}, n_{2}}+\mu_{2} r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}R_{n_{1}, n_{2}}-x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}\bigg]+(j\varepsilon)^2 w\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}\diffp{\Phi_{n_{1}, n_{2}}}{w},
 	\end{split}
 \end{equation*}
 
-получаем следующее уравнение
+получаем следующее уравнение,
 
 \begin{equation*}
 	\begin{split}
 		& \frac{\partial \Phi (w,\tau) /\partial\tau}{ \Phi (w,\tau)}=
 		\frac{(j w)^2}{2}\Phi (w,\tau)\bigg[2\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}f_{n_{1}, n_{2}}+2\mu_{1} r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}f_{n_{1}, n_{2}}+2\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}f_{n_{1}, n_{2}}-\\
-		&-2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}f_{n_{1}, n_{2}}+2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}-2a\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}f_{n_{1}, n_{2}}+a\bigg]-w\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}} \frac{\partial \Phi (w,\tau)/\partial w}{ \Phi (w,\tau)}
+		&-2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}f_{n_{1}, n_{2}}+2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}-2a\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}f_{n_{1}, n_{2}}+a\bigg]-w\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}} \frac{\partial \Phi (w,\tau)/\partial w}{ \Phi (w,\tau)},
 	\end{split}
 \end{equation*}
 
@@ -165,13 +172,14 @@ $\sum_{n_{1}=0}^{N}\sum_{n_{2}=0}^{N-n_{1}}g_{n_{1}, n_{2}}=0$, определя
 		& \frac{\partial \Phi (w,\tau) /\partial\tau}{ \Phi (w,\tau)}=
 		\frac{(j w)^2}{2}\Phi (w,\tau)\bigg[2\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}g_{n_{1}, n_{2}}+2\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}g_{n_{1}, n_{2}}+2\mu_{2} r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}g_{n_{1}, n_{2}}-\\
 		&-2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}g_{n_{1}, n_{2}}+2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}+a\bigg]+w\frac{\partial \Phi (w,\tau)/\partial w}{ \Phi (w,\tau)}\bigg[\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\varphi_{n_{1}, n_{2}}+\\
-		&+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}\varphi_{n_{1}, n_{2}}+\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}\varphi_{n_{1}, n_{2}}-x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\varphi_{n_{1}, n_{2}}-\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}\bigg]
+		&+\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}\varphi_{n_{1}, n_{2}}+\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}\varphi_{n_{1}, n_{2}}-x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}\varphi_{n_{1}, n_{2}}-\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}\bigg].
 	\end{split}
 \end{equation}
-Обозначим
-\begin{equation}\label{b(x)}
-	\begin{split}
-		b(x)=&2\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}g_{n_{1}, n_{2}}+2\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}g_{n_{1}, n_{2}}+2\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}g_{n_{1}, n_{2}}-\\
-		&-2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}g_{n_{1}, n_{2}}+2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}+a
-	\end{split}
-\end{equation}
+
+Результатом второго этапа асимптотического анализа является $b(x)$, определенная следующим образом
+\begin{equation*}
+	\begin{aligned}
+		&b(x)=2\lambda\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}g_{n_{1}, n_{2}}+2\mu_{1}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{1}g_{n_{1}, n_{2}}+2\mu_{2}r_{2}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1}n_{2}g_{n_{1}, n_{2}}-\\
+		&-2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}g_{n_{1}, n_{2}}+2x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-n_1-1}R_{n_{1}, n_{2}}+a.
+	\end{aligned}
+\end{equation*}

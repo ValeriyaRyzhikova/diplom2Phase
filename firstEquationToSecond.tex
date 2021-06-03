@@ -36,11 +36,11 @@
 	&+\mu_1 r_1 (1-q) \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}
 	(n_1+1)H_{n_1+1, n_2-1}(u,t)+\\
 	&+\mu_2 r_1 q \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}
-	(n_2+1)H_{n_1-1, n_2+1}(u,t)\\	
+	(n_2+1)H_{n_1-1, n_2+1}(u,t).\\	
 \end{aligned}
 \end{equation*}
 
-Избавимся от индикаторов, путем исключения некотрых компонент из суммы
+Преобразуем
 
 \begin{equation*}
 \begin{aligned}
@@ -67,11 +67,11 @@
 	&+\mu_2 r_0 \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} 
 	  n_2 H_{n_1, n_2}(u,t)
 	 +\mu_2 r_2 e^{ju}\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-	  n_2 H_{n_1, n_2}(u,t)\\
+	  n_2 H_{n_1, n_2}(u,t).\\
 \end{aligned}
 \end{equation*}
 
-Сократим некоторый слагаемые 
+Приведем подобные слагаемые 
 
 \begin{equation*}
 \begin{aligned}
@@ -85,7 +85,7 @@
 	&+\mu_1 r_2 (e^{ju} -1)\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 	n_1 H_{n_1, n_2}(u,t)
 	+\mu_2 r_2 (e^{ju} -1)\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-	n_2 H_{n_1, n_2}(u,t)\\
+	n_2 H_{n_1, n_2}(u,t),\\
 \end{aligned}
 \end{equation*}
 
@@ -99,11 +99,11 @@
 		&+\mu_1 r_2 (e^{ju} -1)\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 		n_1 H_{n_1, n_2}(u,t)
 		+\mu_2 r_2 (e^{ju} -1)\sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-		n_2 H_{n_1, n_2}(u,t)\\
+		n_2 H_{n_1, n_2}(u,t).\\
 	\end{aligned}
 \end{equation*}
 
-И вынесем $(e^{ju} - 1)$
+Вынесем $(e^{ju} - 1)$
 
 \begin{equation*}
 	\begin{aligned}
@@ -115,6 +115,6 @@
 		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 		n_1 H_{n_1, n_2}(u,t)
 		+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-		n_2 H_{n_1, n_2}(u,t)\bigg\}\\
+		n_2 H_{n_1, n_2}(u,t)\bigg\}.\\
 	\end{aligned}
 \end{equation*}

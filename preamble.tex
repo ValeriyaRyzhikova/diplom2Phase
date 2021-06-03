@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{subfiles}
+
+\usepackage[utf8]{inputenc}															%входная кодировка - unicode
+\usepackage[T2A]{fontenc}															%выходная кодировка - t2a
+\usepackage[main=russian]{babel}													%поддержка языков
+
+\usepackage{amsmath, amsfonts, amssymb, textcomp}									%для формул
+\usepackage{graphicx}																%для картиночек
+\usepackage{caption}																%подписи таблиц и картинок
+\DeclareCaptionLabelSeparator{emdash}{~---~}										%разделитель длинное тире
+\captionsetup{margin=10pt,labelsep=emdash}											%задание формата подписи
+
+\usepackage[left=3cm,right=1cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}		%поля, стоят как надо
+
+\usepackage{indentfirst} 															%начало первого абзаца с отступа
+\setlength{\parindent}{1.25cm}
+
+%\usepackage{mathptm}																%прямое начертание греческих букв, оч всрато
+
+\usepackage{setspace}																%редактировать междустрочный интервал
+\onehalfspacing																		%задает полуторный интервал
+
+\usepackage{pscyr}																	%кириллические шрифты
+\renewcommand{\rmdefault}{ftm}														%times new roman кириллица
+
+\usepackage{titlesec}																%корректировать заголовки
+\titleformat{\chapter}{\rule{1.25cm}{0pt}}{\thechapter}{1em}{}						%начертание заголовка главы
+\titleformat{\section}{\rule{1.25cm}{0pt}}{\thesection}{1em}{}						%начертание заголовка раздела
+\titleformat{\subsection}{\rule{1.25cm}{0pt}}{\thesubsection}{1em}{}				%начертание заголовка подраздела
+\titlespacing{\chapter}{0pt}{-10pt}{15pt}											%отступ после заголовка главы
+
+\usepackage{tocloft}																%редактировать toc
+\renewcommand{\cftchapfont}{}														%не выделять полужирным главы
+\renewcommand{\cfttoctitlefont}{}													%размер названия toc
+\renewcommand{\cftchappagefont}{}													%начертание номеров страниц
+\renewcommand{\cftchapleader}{\cftdotfill\cftdotsep}				 				%заполнитель после названия главы
+\setlength{\cftaftertoctitleskip}{5pt}												%отступ после заголовка оглавления
+\setlength{\cftbeforetoctitleskip}{0pt}												%отступ до заголовка оглавления
+
+\usepackage{multirow}																%объединение строк в таблицах
+
+\bibliographystyle{gost780sCorr}														%стиль оформления литературы
+
+\newtheorem{theorem}{Теорема}[chapter]												%нумерация теорем по главам
+\newtheorem{corollary}{Следствие}[chapter]											%нумерация следствий по главам
+
+\newcommand{\La}{\mathbf\Lambda}													%жирные буквы для обозначения векторов
+\newcommand{\Q}{\mathbf{Q}}
+\newcommand{\I}{\mathbf{I}}
+\newcommand{\B}{\mathbf{B}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\ff}{\mathbf{f}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\g}{\mathbf{g}}
+\newcommand{\p}{\mbox{\boldmath$\varphi$}}
+\newcommand{\e}{\mathbf{e}}
+\newcommand{\h}{\mathbf{H}}
+\newcommand{\F}{\mathbf{F}}
+
+\usepackage{tablestyle}																%подписи таблиц по левому краю

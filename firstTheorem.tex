@@ -1,23 +1,27 @@
-\textbf{Теорема 1.} Kомпоненты $R_{n_{1}, n_{2}}(x)$ распределения вероятностей блока обслуживания
-\begin{equation}
-	\begin{split} \label{R}
-		&L_{n_{1}, n_{2}}(x) = (\mu_{1}\mu_{2}(1-r_{1}))^{N-(n_{1}+n_{2})}
+\textbf{Теорема 2.1.} Компоненты  $R_{n_{1}, n_{2}}(x)$ распределения вероятностей числа приборов, занятых на первой и второй фазе имеет вид
+
+\begin{equation}\label{R}
+		R_{n_{1}, n_{2}}(x)=\frac{L_{n_{1}, n_{2}}(x)}{c(x)},
+\end{equation}
+		где\\
+\begin{equation*}
+	\begin{aligned}
+		L_{n_{1}, n_{2}}(x) =& (\mu_{1}\mu_{2}(1-r_{1}))^{N-(n_{1}+n_{2})}
 		\frac{N!}{(n_{1}+n_{2})!}C_{n_{1}+n_{2}}^{n_{2}}
 		(\mu_{1}(1-q))^{n_{2}}(\mu_{2}q)^{n_{1}}(\lambda+x)^{n_{1}+n_{2}},\\
-		&c(x)=\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} L_{n_{1}, n_{2}},\\
-		&R_{n_{1}, n_{2}}(x)=\frac{L_{n_{1}, n_{2}}(x)}{c(x)}
-	\end{split}
-\end{equation}
+		c(x)=&\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} L_{n_{1}, n_{2}}.
+	\end{aligned}
+\end{equation*}
 
 \begin{equation*}
 	\begin{aligned}
-		x=x(\tau):x'(\tau)=a(x)=&\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		x=x(\tau);x'(\tau)=a(x)=&\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
 		R_{n_{1}, n_{2}}
 		- x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
 		R_{n_{1}, n_{2}}+\\
 		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 		n_1 R_{n_{1}, n_{2}}
 		+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-		n_2 R_{n_{1}, n_{2}}
+		n_2 R_{n_{1}, n_{2}}.
 	\end{aligned}
 \end{equation*}

@@ -3,12 +3,13 @@
 \begin{equation}\label{hFirstSystemOfEquations}
 	\begin{split}
 		\diffp{H_{n_{1}, n_{2}}(u,t)}{t}=&-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})H_{n_{1}, n_{2}}(u,t) + j\sigma \overline{E}_{n_{1}+n_{2}}^N\diffp{H_{n_{1}, n_{2}}(u,t)}{u}+\\
-		&+\mu_{1}r_{1}q n_{1}H_{n_{1}, n_{2}}(u,t)+ \mu_{2}r_{1}(1-q)n_{2}H_{n_{1}, n_{2}}(u,t)+а \lambda e^{ju} E_{n_{1}+n_{2}}^N H_{n_{1}, n_{2}}(u,t)+\\
+		&+\mu_{1}r_{1}q n_{1}H_{n_{1}, n_{2}}(u,t)+ \mu_{2}r_{1}(1-q)n_{2}H_{n_{1}, n_{2}}(u,t)+\\
+		&+ \lambda e^{ju} E_{n_{1}+n_{2}}^N H_{n_{1}, n_{2}}(u,t)+\\
 		&+\lambda qH_{n_{1}-1, n_{2}}(u,t) - j \sigma q  e^{-ju} \diffp{H_{n_{1}-1, n_{2}}(u,t)}{u}+\\
 		&+\lambda (1-q)H_{n_{1}, n_{2}-1}(u,t) - j \sigma (1-q) e^{-ju} \diff{H_{n_{1}, n_{2}-1}(u,t)}{u}+\\
 		&+ \mu_{1} r_{0}(n_{1}+1) H_{n_{1} +1 , n_{2}}(u,t) + \mu_{1} r_{2}  e^{ju}(n_{1}+1)H_{n_{1} + 1, n_{2}}(u,t)+\\
 		&+ \mu_{2} r_{0}(n_{2}+1) H_{n_{1}, n_{2} + 1 }(u,t) + \mu_{2} r_{2}  e^{ju}(n_{2}+1) H_{n_{1}, n_{2} + 1}(u,t)+\\
-		&+\mu_{1} r_{1}(1-q)(n_{1}+1) H_{n_{1} +1 , n_{2}-1}(u,t)+(n_{2}+1)\mu_{2} r_{1}q H_{n_{1} -1 , n_{2}+1}(u,t)\\
+		&+\mu_{1} r_{1}(1-q)(n_{1}+1) H_{n_{1} +1 , n_{2}-1}(u,t)+(n_{2}+1)\mu_{2} r_{1}q H_{n_{1} -1 , n_{2}+1}(u,t),\\
 		\\
 		\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} \diffp{H_{n_1,n_2}(u,t)}{t}=
 		&(e^{ju} - 1)\bigg\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
@@ -18,6 +19,6 @@
 		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 		n_1 H_{n_1, n_2}(u,t)
 		+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-		n_2 H_{n_1, n_2}(u,t)\bigg\}\\
+		n_2 H_{n_1, n_2}(u,t)\bigg\}.
 	\end{split}
 \end{equation}

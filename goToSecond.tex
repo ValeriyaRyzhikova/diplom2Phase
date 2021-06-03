@@ -1,4 +1,4 @@
-Найдем $x=x(\tau)$ Рассмотрим второе уравнение системы (1) в пределе $\varepsilon \rightarrow 0$.
+Найдем $x=x(\tau)$. Рассмотрим второе уравнение системы \eqref{h1SystemOfEquation}! в пределе $\varepsilon \rightarrow 0$.
 \begin{align*}
 \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} \diffp{F_{n_{1}, n_{2}}(w,\tau)}{\tau}=
 &jw\bigg\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
@@ -8,9 +8,9 @@ F_{n_{1}, n_{2}}(w,\tau, \varepsilon)+\\
 &+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 n_1 F_{n_{1}, n_{2}}(w,\tau)
 +\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-n_2 F_{n_{1}, n_{2}}(w,\tau)\bigg\}\\
+n_2 F_{n_{1}, n_{2}}(w,\tau)\bigg\}.\\
 \end{align*} 
-и заменим решение $F_{n_{1}, n_{2}}(w,\tau)=R_{n_{1}, n_{2}}e^{jwx(\tau)}$, тогда
+Выполним замену $F_{n_{1}, n_{2}}(w,\tau)=R_{n_{1}, n_{2}}e^{jwx(\tau)}$, тогда
 \begin{equation*}
 	\begin{aligned}
 		x'(\tau) =
@@ -21,12 +21,12 @@ n_2 F_{n_{1}, n_{2}}(w,\tau)\bigg\}\\
 		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 		n_1 R_{n_{1}, n_{2}}
 		+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-		n_2 R_{n_{1}, n_{2}}\\
+		n_2 R_{n_{1}, n_{2}}.\\
 	\end{aligned}
 \end{equation*}
 Обозначим через
-\begin{equation}
-	\begin{aligned}\label{a(x)}
+\begin{equation}\label{a_func}
+	\begin{aligned}
 		x'(\tau)=a(x)=&\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
 		R_{n_{1}, n_{2}}
 		- x\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
@@ -34,6 +34,8 @@ n_2 F_{n_{1}, n_{2}}(w,\tau)\bigg\}\\
 		&+\mu_1 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
 		n_1 R_{n_{1}, n_{2}}
 		+\mu_2 r_2 \sum_{n_1=0}^{N}\sum_{n_2=0}^{N-n_1} 
-		n_2 R_{n_{1}, n_{2}}
+		n_2 R_{n_{1}, n_{2}}.
 	\end{aligned}
 \end{equation}
+
+Теорема доказана.

@@ -1,12 +1,10 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{graphicx}
-%\usepackage[condensed,math]{iwona}
+\usepackage[condensed,math]{iwona}
 \usepackage[no-math]{fontspec} 
-
-\setmainfont{Times New Roman}
-
-
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic} 
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
 \usepackage[russian]{babel}
 \usepackage{changepage}
 \usepackage{amsmath}
@@ -34,19 +32,11 @@
 	{\centering{ОГЛАВЛЕНИЕ}}%
 }
 
-\usepackage{setspace}
-\onehalfspacing
-
-
-
 \begin{document}
 	\subfile{titulList}
 	\newpage
-	\subfile{tasks}
-	\newpage
 \setcounter{secnumdepth}{0}
 \dottedcontents{section}[3.8em]{}{2.3em}{1pc}
-\dottedcontents{subsection}[5em]{}{2.3em}{1pc}
 	\tableofcontents
 	\newpage
 
@@ -59,48 +49,43 @@
 
 	\subfile{introduction}
 	\newpage
-\section{1. Иследование системы M|$H_2$|2 с орбитой}
-	\subfile{lat}
-	\newpage
-\section{2. Иследование системы M|$H_2$|N с орбитой}	
-\titleformat*{\subsection}{\bf \raggedright}
-\subsection{2.1 Математическая модель и постановка задачи}
+	
+\titleformat*{\section}{\bf \raggedright}
+\section{1 Математическая модель и постановка задач}
 
 	\subfile{mathModel}
 	\newpage
 	
 	
-\subsection{2.2 Уравнения Колмогорова}
+\section{2 Уравнения Колмогорова}
 	
 	\subfile{KolmogorovFirst}
 	\subfile{firstEquationToSecond}
+	\newpage
 	\subfile{KolmogorovResult}
 	\newpage
 	
-\subsection{2.3 Первый этап асимптотического анализа}
+\section{3 Первый этап асимтотического анализа}
 	\subfile{goToF}\\
 	\subfile{firstTheorem}
 	\subfile{proofFirstTheorem}\\
 	\subfile{goToSecond}
 	\newpage
 	
-\subsection{2.4 Второй этап асимптотического анализа}
+\section{4 Второй этап асимтотического анализа}
 	\subfile{goToH1}
 	\subfile{goToF1}
 	\subfile{secondAsimptot}
 	\newpage
 	
-\subsection{2.5 Метод асимптотически диффузионного анализа}
+\section{5 Метод асимтотическо диффузионного анализа}
 	\subfile{secondTeorem}
 	\subfile{proofSecondTeorem}
 	\subfile{diffAnaliz}
-	\newpage 
-	
-\subsection{2.6 Численные эксперементы}
 	\subfile{graphics}
 	\newpage 
 	
-\titleformat*{\subsection}{\bf \center \uppercase}
+\titleformat*{\section}{\bf \center \uppercase}
 \section{Список использованной литературы}
 	\subfile{litreche}
 	\newpage
