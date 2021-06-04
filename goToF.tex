@@ -7,8 +7,8 @@
 Тогда мы можем переписать уравнения \eqref{hFirstSystemOfEquations}
 \begin{equation} \label{fSystemOfEquations}
 	\begin{split}
-		\varepsilon\diffp{F_{n_{1}, n_{2}}(w,\tau,\varepsilon)}{\tau}
-		=&-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})F_{n_{1}, n_{2}}(w,\tau,\varepsilon) + j \overline{E}_{n_{1}+n_{2}}^N\diffp{F_{n_{1}, n_{2}}(w,\tau,\varepsilon)}{w}+\\
+		&\varepsilon\diffp{F_{n_{1}, n_{2}}(w,\tau,\varepsilon)}{\tau}
+		=-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})F_{n_{1}, n_{2}}(w,\tau,\varepsilon) + j \overline{E}_{n_{1}+n_{2}}^N\diffp{F_{n_{1}, n_{2}}(w,\tau,\varepsilon)}{w}+\\
 		&+ \mu_{1}r_{1}qn_{1}F_{n_{1}, n_{2}}(w,\tau,\varepsilon)+ \mu_{2}r_{1}(1-q)n_{2}F_{n_{1}, n_{2}}(w,\tau,\varepsilon)+\\
 		&+ \lambda e^{j\varepsilon w}E_{n_{1}+n_{2}}^N F_{n_{1}, n_{2}}(w,\tau,\varepsilon)+\lambda qF_{n_{1}-1, n_{2}}(w,\tau,\varepsilon) -\\
 		&- j q  e^{-j\varepsilon w} \diffp{F_{n_{1}-1, n_{2}}(w,\tau,\varepsilon)}{w}+\lambda (1-q)F_{n_{1}, n_{2}-1}(w,\tau,\varepsilon) -\\
@@ -17,8 +17,8 @@
 		& + \mu_{2} r_{2} (n_{2}+1) e^{j\varepsilon w} F_{n_{1}, n_{2} + 1}(w,\tau,\varepsilon)+\\
 		&+\mu_{1} r_{1}(1-q)(n_{1}+1) F_{n_{1} +1 , n_{2}-1}(w,\tau,\varepsilon)+\\
 		&+\mu_{2} r_{1}q(n_{2}+1) F_{n_{1} -1 , n_{2}+1}(w,\tau,\varepsilon),\\
-		\varepsilon \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} \diffp{F_{n_{1}, n_{2}}(w,\tau, \varepsilon)}{\tau}=
-		&(e^{j\varepsilon w} - 1)\bigg\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		&\varepsilon \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} \diffp{F_{n_{1}, n_{2}}(w,\tau, \varepsilon)}{\tau}=
+		(e^{j\varepsilon w} - 1)\bigg\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
 		F_{n_{1}, n_{2}}(w,\tau, \varepsilon)+\\
 		&+ j  e^{-j\varepsilon w}\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
 		\diffp{F_{n_{1}, n_{2}}(w,\tau, \varepsilon)}{w}+\\

@@ -1,8 +1,8 @@
-Тогда (25) перепишем в виде
-\begin{align}
-	\frac{\partial \Phi (w,\tau)}{\partial \tau}=a'(x) w\frac{\partial \Phi (w,\tau)}{\partial w}+\frac{(jw)^2}{2}b(x)\Phi(w,\tau).
+Тогда \eqref{withB} перепишем в виде
+\begin{align}\label{newWithB}
+	\frac{\partial \Phi (w,\tau)}{\partial \tau}=a'(x) w\frac{\partial \Phi (w,\tau)}{\partial w}+\frac{(jw)^2}{2}b(x)\Phi(w,\tau)
 \end{align}
-Уравнение (27) это преобразование Фурье уравнения Фокера-Планка для плотности распределения вероятностей $P(y, \tau )$ значений центрированного и нормированного количества заявок на орбите. Находя обратное преобразование Фурье от (27), получим
+Уравнение c это преобразование Фурье уравнения Фокера-Планка для плотности распределения вероятностей $P(y, \tau )$ значений центрированного и нормированного количества заявок на орбите. Находя обратное преобразование Фурье от \eqref{newWithB}, получим
 \begin{align}
 	\frac{\partial P (y,\tau)}{\partial \tau}=-\frac{\partial}{\partial y}\{a'(x)yP(y,\tau)\} 
 	+\frac{1}{2}\frac{\partial^2}{\partial y^2}\{b(x)P(y,\tau)\}.
@@ -15,8 +15,8 @@
 \begin{align}
 	z(\tau)=x(\tau)+\varepsilon y(\tau),
 \end{align}
-где $\varepsilon=\sqrt{\sigma}$, исходя из (8), $dx(\tau)=a(x)d\tau$, следует
-\begin{align}
+где $\varepsilon=\sqrt{\sigma}$, исходя из  \eqref{a_func}, $dx(\tau)=a(x)d\tau$, следует
+\begin{align}\label{bz}
 	dz(\tau)=d(x(\tau)+\varepsilon y(\tau))=(a(x)+\varepsilon ya'(x))d\tau+\varepsilon \sqrt{b(x)}dw(\tau).
 \end{align}
 Разложим $a(z)$ в ряд 
@@ -24,15 +24,15 @@
 	&a(z)=a(x+\varepsilon y)=a(x)+\varepsilon y a'(x)+O(\varepsilon^2),\\
 	&\varepsilon\sqrt{b(z)}=\varepsilon\sqrt{b(x+\varepsilon y)}=\varepsilon\sqrt{b(x)+O(\varepsilon)}=\sqrt{\sigma b(x)}+O(\varepsilon).
 \end{align*}
-Перепишем уравнение (31) с точностью до $O(\varepsilon^2)$
-\begin{align}
+Перепишем уравнение \eqref{bz} с точностью до $O(\varepsilon^2)$
+\begin{align}\label{newBz}
 	dz(\tau)=a(z)d\tau+\sqrt{\sigma b(z)}dw(\tau).
 \end{align}
 Обозначим плотность распределения вероятностей для процесса $z(\tau)$
 \begin{align*}
 	\pi(z,\tau)=\frac{\partial P\{z(\tau)<z\}}{\partial z}.
 \end{align*}
-Так как $z(\tau)$ -- это решение стохастического дифференциального уравнения (32), следовательно, процесс является диффузионным и для его плотности распределения вероятностей можем записать уравнение Фокера-Планка
+Так как $z(\tau)$ -- это решение стохастического дифференциального уравнения \eqref{newBz}, следовательно, процесс является диффузионным и для его плотности распределения вероятностей можем записать уравнение Фокера-Планка
 \begin{align}
 	\frac{\partial \pi (z,\tau)}{\partial \tau}=-\frac{\partial}{\partial z}\{a(z)\pi(z,\tau)\} 
 	+\frac{1}{2}\frac{\partial^2}{\partial z^2}\{\sigma b(z)\pi(z,\tau)\}.
@@ -61,15 +61,15 @@
 
 Нетрудно показать, что условием существования стационарного
 режима рассматриваемой системы является неравенство 
-\begin{align}
-	\lambda<Nr_{0}\bigg(\frac{q}{\mu_{1}}+\frac{1-q}{\mu_{2}}\bigg).
+\begin{align}\label{uslStat}
+	\lambda<Nr_{0}\ (\frac{q}{\mu_{1}}+\frac{1-q}{\mu_{2}}).
 \end{align}
 
 Введем следующую замену для того, чтобы среднее время обслуживания равнялось единице
 \begin{align*}
 	q=\frac{\mu_{1}(1-\mu_{2})}{\mu_{1}-\mu_{2}}.
 \end{align*}
-В таком случае неравенство (38) имеет вид
+В таком случае неравенство \eqref{uslStat} имеет вид
 \begin{align*}
 	\lambda<Nr_{0}.
 \end{align*}

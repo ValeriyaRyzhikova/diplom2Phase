@@ -36,8 +36,8 @@ H_{n_{1}, n_{2}}(u,t)=e^{j\frac{u}{\sigma}x(\sigma t)}H_{n_{1}, n_{2}}^{(1)}(u,t
 С учетом \eqref{a_func} перепишем систему \eqref{renameH1}
 \begin{equation}\label{h1SystemOfEquation}
 	\begin{split}
-		\diffp{H_{n_{1}, n_{2}}^{(1)}c(u,t)}{t}+ju a(x) H_{n_{1}, n_{2}}^{(1)}(u,t)=
-		&-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})H_{n_{1}, n_{2}}^{(1)}(u,t) +\\
+		&\diffp{H_{n_{1}, n_{2}}^{(1)}c(u,t)}{t}+ju a(x) H_{n_{1}, n_{2}}^{(1)}(u,t)=
+		-(\lambda+\mu_{1}n_{1}+\mu_{2}n_{2})H_{n_{1}, n_{2}}^{(1)}(u,t) +\\
 		&+ j\sigma \overline{E}_{n_{1}+n_{2}}^N\diffp{H_{n_{1}, n_{2}}^{(1)}(u,t)}{u}-x\overline{E}_{n_{1}+n_{2}}^NH_{n_{1}, n_{2}}^{(1)}+\\
 		&+\mu_{1}r_{1}q n_{1}H_{n_{1}, n_{2}}^{(1)}(u,t)+ \mu_{2}r_{1}(1-q)n_{2}H_{n_{1}, n_{2}}^{(1)}(u,t)+\\
 		&+ \lambda e^{ju} E_{n_{1}+n_{2}}^N H_{n_{1}, n_{2}}^{(1)}(u,t)+\\
@@ -51,8 +51,8 @@ H_{n_{1}, n_{2}}(u,t)=e^{j\frac{u}{\sigma}x(\sigma t)}H_{n_{1}, n_{2}}^{(1)}(u,t
 		& + \mu_{2} r_{2}  e^{ju}(n_{2}+1) H_{n_{1}, n_{2} + 1}(u,t)+\\
 		&+\mu_{1} r_{1}(1-q)(n_{1}+1) H_{n_{1} +1 , n_{2}-1}^{(1)}(u,t)+\\
 		&+(n_{2}+1)\mu_{2} r_{1}q H_{n_{1} -1 , n_{2}+1}^{(1)}(u,t) ,\\
-		\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\bigg\{ \diffp{H_{n_1,n_2}^{(1)}(u,t)}{t}+ju a(x) H_{n_1,n_2}^{(1)}(u,t)\bigg\}=
-		&(e^{ju} - 1)\bigg\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+		&\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}\bigg\{ \diffp{H_{n_1,n_2}^{(1)}(u,t)}{t}+ju a(x) H_{n_1,n_2}^{(1)}(u,t)\bigg\}=
+		(e^{ju} - 1)\bigg\{\lambda \sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
 		H_{n_1, n_2}^{(1)}(u,t)\\
 		&+ e^{-ju}\sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
 		\bigg[\sigma j\diffp{ H_{n_1, n_2}^{(1)}(u,t)}{u}-xH_{n_1, n_2}^{(1)}(u,t)\bigg]+\\
