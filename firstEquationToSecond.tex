@@ -12,8 +12,8 @@
 	-\mu_2 \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}
 	n_2 H_{n_1, n_2}(u,t)+\\
 	&+\mu_1 r_1 q \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}
-	n_1 H_{n_1, n_2}(u,t)
-	+\mu_2 r_1 (1-q)\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} 
+	n_1 H_{n_1, n_2}(u,t)+\\
+	&+\mu_2 r_1 (1-q)\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} 
 	n_2 H_{n_1, n_2}(u,t)+\\
 	&+\lambda e^{ju}\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1}
 	E^N_{n_1+n_2}H_{n_1, n_2}(u,t)+\\
@@ -48,7 +48,8 @@
 	 +j\sigma \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_1} 
 	 \diffp{H_{n_1, n_2}(u,t)}{u}-\\
 	&-\mu_1 (r_0+r_2) \sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} n_1 H_{n_1, n_2}(u,t)+\\
-	&-\mu_2 (r_0+r_2)\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} n_2 H_{n_1, n_2}(u,t)+\lambda e^{ju}\sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
+	&-\mu_2 (r_0+r_2)\sum_{n_1=0}^N\sum_{n_2=0}^{N-n_1} n_2 H_{n_1, n_2}(u,t)+\\
+	&+\lambda e^{ju}\sum_{n_1=0}^N\sum_{n_2=N-n_1}^{N-n_1} 
 	  H_{n_1, n_2}(u,t)+\\
 	&+\lambda q \sum_{n_1=0}^{N-1}\sum_{n_2=0}^{N-1-n_2} 
 	  H_{n_1, n_2}(u,t)

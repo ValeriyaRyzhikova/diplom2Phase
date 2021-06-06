@@ -37,7 +37,9 @@
 \usepackage{setspace}
 \onehalfspacing
 
-
+\usepackage[nooneline]{caption} 
+\captionsetup[table]{justification=raggedright} 
+\captionsetup[figure]{justification=centering,labelsep=endash}
 
 \begin{document}
 	\subfile{titulList}
@@ -107,7 +109,14 @@
 	\subfile{graphics}
 	\newpage 
 	
+	
+
+	
 \titleformat*{\subsection}{\bf \center \uppercase}
+\section{Заключение}
+\subfile{ending}
+\newpage 
+	
 \section{Список использованной литературы}
 	\subfile{litreche}
 	\newpage
