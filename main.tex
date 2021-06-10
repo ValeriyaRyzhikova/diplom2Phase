@@ -5,6 +5,7 @@
 \usepackage[no-math]{fontspec} 
 
 \setmainfont{Times New Roman}
+\setlength\parindent{12.5mm}
 
 
 \usepackage[russian]{babel}
@@ -26,29 +27,35 @@
 \usepackage{amsmath,amsfonts,amssymb,amsthm, bm}
 \usepackage{lipsum}
 \usepackage{float}
-\setlength{\parindent}{5ex}
+%\setlength{\parindent}{5ex}
 \setlength{\parskip}{1em}
 
 \addto\captionsrussian{% Replace "english" with the language you use
 	\renewcommand{\contentsname}%
-	{\centering{ОГЛАВЛЕНИЕ}}%
+	{\centering{\normalsize{ОГЛАВЛЕНИЕ}}}%
 }
+\addto\captionsrussian{% Replace "english" with the language you use
+	\renewcommand{\figurename}{Рисунок}
+}
+
+
 
 \usepackage{setspace}
 \onehalfspacing
 
 \usepackage[nooneline]{caption} 
-\captionsetup[table]{justification=raggedright} 
 \captionsetup[figure]{justification=centering,labelsep=endash}
+\captionsetup[table]{justification=centering,labelsep=endash}
 
 \begin{document}
 	\subfile{titulList}
 	\newpage
+	\setcounter{page}{2}
 	\subfile{tasks}
 	\newpage
 	
 	\begin{center}
-		АНОТАЦИЯ
+		\bf{АННОТАЦИЯ}
 	\end{center}
 	\subfile{anotaciya}
 	\newpage
@@ -68,19 +75,26 @@
 
 	\subfile{introduction}
 	\newpage
-\section{1. Иследование системы M|$H_2$|2 с орбитой}
+
+\titleformat*{\section}{\bf  \filright \uppercase}
+\titlespacing{\section}{12.5mm}{*1}{*1}
+%\titlespacing{\section}{5pt}{*4}{*1.5}
+\titleformat*{\subsection}{\bf \filright }
+\titlespacing{\subsection}{12.5mm}{*1}{*1}
+\section{1 Иследование системы M|$H_2$|2 с орбитой}
+	\setlength\parindent{12.5mm}
 	\subfile{lat}
 	\newpage
-\section{2. Иследование системы M|$H_2$|N с орбитой}	
-\titleformat*{\subsection}{\bf \raggedright}
-\subsection{2.1 Математическая модель и постановка задачи}
+\section{2 Иследование системы M|$H_2$|N с орбитой}	
 
+\subsection{2.1 Математическая модель и постановка задачи}
+	\setlength\parindent{12.5mm}
 	\subfile{mathModel}
 	\newpage
 	
 	
 \subsection{2.2 Уравнения Колмогорова}
-	
+	\setlength\parindent{12.5mm}
 	\subfile{KolmogorovFirst}
 	\subfile{firstEquationToSecond}
 	\subfile{KolmogorovResult}
@@ -112,7 +126,7 @@
 	
 
 	
-\titleformat*{\subsection}{\bf \center \uppercase}
+\titleformat*{\section}{\bf \center \uppercase}
 \section{Заключение}
 \subfile{ending}
 \newpage 

@@ -1,10 +1,13 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{graphicx}
-\usepackage[condensed,math]{iwona}
+%\usepackage[condensed,math]{iwona}
 \usepackage[no-math]{fontspec} 
-\defaultfontfeatures{Ligatures={TeX},Renderer=Basic} 
-\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
+
+\setmainfont{Times New Roman}
+\setlength\parindent{12.5mm}
+
+
 \usepackage[russian]{babel}
 \usepackage{changepage}
 \usepackage{amsmath}
@@ -29,28 +32,46 @@
 
 \addto\captionsrussian{% Replace "english" with the language you use
 	\renewcommand{\contentsname}%
-	{\centering{ОГЛАВЛЕНИЕ}}%
+	{\centering{\normalsize{ОГЛАВЛЕНИЕ}}}%
+}
+\addto\captionsrussian{% Replace "english" with the language you use
+	\renewcommand{\figurename}{Рисунок}
+}
+
+
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage[nooneline]{caption} 
+\captionsetup[figure]{justification=centering,labelsep=endash}
+\captionsetup[table]{justification=centering,labelsep=endash}
+\addto\captionsrussian{% Replace "english" with the language you use
+	\renewcommand{\contentsname}%
+	{\centering{\normalsize{ОГЛАВЛЕНИЕ}}}%
 }
 
 \begin{document}
-	\subfile{titulList}
+	\subfile{titulListOtch}
 	\newpage
 \setcounter{secnumdepth}{0}
+\setcounter{page}{2}
 \dottedcontents{section}[3.8em]{}{2.3em}{1pc}
 	\tableofcontents
 	\newpage
 
 \titleformat*{\section}{\bf \center \uppercase}
  \(\text{ }\)\\
- 
+ \setlength\parindent{12.5mm}
  
 \section{Введение}
 
 
-	\subfile{introduction}
+	\subfile{introductionOtch}
 	\newpage
 	
-\titleformat*{\section}{\bf \raggedright}
+\titleformat*{\section}{\bf  \filright \uppercase}
+\titlespacing{\section}{12.5mm}{*1}{*1}
 \section{1 Математическая модель и постановка задач}
 
 	\subfile{mathModel}

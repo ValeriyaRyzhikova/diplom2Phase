@@ -381,7 +381,7 @@ $x=x(\tau):x'(\tau)=a(x)=\boldsymbol{R}\boldsymbol{B}\boldsymbol{e}-x(\tau)\bold
 \subsection{1.5 Метод асимптотически диффузионного анализа}
 Построим аппроксимацию распределения вероятностей числа заявок на орбите методом асимптотически диффузионного анализа. Сформулируем и докажем следующую теорему.
 
-\textbf{Теорема 1.2.} Ряд распределения вероятностей нормированного числа заявок на орбите можно аппроксимировать следующей функцией плотности вероятностей
+\textbf{Теорема 1.2.} Предельное распределение вероятностей нормированного числа заявок на орбите в условии растущего времени задержки заявок на орбите имеет функцию плотности вероятности
 \begin{align}
 	\pi (z)= \frac{C}{b(z)}exp\bigg\{\frac{2}{\sigma} \int\limits_0^z \frac{a(x)}{b(x)}dx\bigg\},
 \end{align} 
@@ -399,6 +399,7 @@ $x=x(\tau):x'(\tau)=a(x)=\boldsymbol{R}\boldsymbol{B}\boldsymbol{e}-x(\tau)\bold
 		\boldsymbol{ge}=0.
 	\end{split}
 \end{equation}
+\hspace*{\parindent}%
 \textbf{Доказательство.} Подставим $b(x)$ в (20)
 \begin{align}
 	\frac{\partial \Phi (w,\tau)}{\partial \tau}=w\frac{\partial \Phi (w,\tau)}{\partial \tau} \bigg\{\boldsymbol{\varphi}[\boldsymbol{B}-x\boldsymbol{I_{0}}] \boldsymbol{e}-\boldsymbol{RI_{0}e}\bigg\}+\frac{(jw)^2}{2}b(x)\Phi(w,\tau).
@@ -475,7 +476,7 @@ $x=x(\tau):x'(\tau)=a(x)=\boldsymbol{R}\boldsymbol{B}\boldsymbol{e}-x(\tau)\bold
 \end{align} 
 которое будем называть диффузионной аппроксимацией дискретного распределения вероятностей количества заявок на орбите для изучаемой системы.
 
-Нетрудно показать, что условием существования стационарного
+Возможно показать, что условием существования стационарного
 режима рассматриваемой системы является неравенство 
 \begin{align}
 	\lambda<2r_{0}\bigg(\frac{q}{\mu_{1}}+\frac{1-q}{\mu_{2}}\bigg).
